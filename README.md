@@ -2,7 +2,7 @@
 
 ​
 
-# Marcadores
+# MarketVisual
 
 # Descripcion Del Proyecto
 
@@ -13,7 +13,7 @@ lo profesionales podran publicar sus servicios indicando valores desde.
 Los usuarios podran cotizar y publicar
 APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.
 
-### Trello 🚀
+### Historia De Usuario 🚀
 
 https://trello.com/b/yQPoq2Zp/proyecto-final
 
@@ -58,6 +58,6 @@ https://trello.com/b/yQPoq2Zp/proyecto-final
 
 ​
 
-## Autore ✒️
+## Autor ✒️
 
 Fabian Salas Orozo
