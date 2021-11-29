@@ -1,4 +1,4 @@
 class PublicationCategory < ApplicationRecord
   belongs_to :catergory
-  belongs_to :pulication
+  belongs_to :publication
 end

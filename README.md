@@ -1,24 +1,63 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+​
 
-Things you may want to cover:
+# Marcadores
 
-* Ruby version
+# Descripcion Del Proyecto
 
-* System dependencies
+MarketVisual
+aplicacion web de busqueda y publicaciones de servicios para profesionales del area audivisual , sonido y musicos profesionales
+lo usuarios que utilicen esta aplicacion podran evaluar y comentar los servicios y cursos entregados por los profesionales.
+lo profesionales podran publicar sus servicios indicando valores desde.
+Los usuarios podran cotizar y publicar
+APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.
 
-* Configuration
+### Trello 🚀
 
-* Database creation
+https://trello.com/b/yQPoq2Zp/proyecto-final
 
-* Database initialization
+### Pre-requisitos 🚀
 
-* How to run the test suite
+​
 
-* Services (job queues, cache servers, search engines, etc.)
+* ruby '2.7.3'
 
-* Deployment instructions
+* gem 'rails', '~> 5.2.6'
 
-* ...
+​
+
+## modelo fisico 📋
+
+​
+​
+
+## Construido con 🛠️
+
+​
+* Visual Studio Code
+
+* Ruby 2.7.3
+
+* Rails 5.2.6
+
+​
+
+## gemas instalada 📌
+
+* gem 'devise'
+* gem 'aws-sdk-s3'
+* gem 'faker'
+* gem 'rails-erd', group: :development
+
+​
+
+
+
+
+
+​
+
+## Autore ✒️
+
+Fabian Salas Orozo
