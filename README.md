@@ -29,7 +29,7 @@ https://trello.com/b/yQPoq2Zp/proyecto-final
 
 ## modelo fisico 📋
 
-​
+​​![Modelo conceptual](https://github.com/Alonsorozco/imagenes/blob/main/Captura%20de%20Pantalla%202021-11-29%20a%20la(s)%2000.40.18.png?raw=true)
 ​
 
 ## Construido con 🛠️
