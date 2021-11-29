@@ -62,3 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'aws-sdk-s3'
+gem 'faker'
+gem 'rails-erd', group: :development
