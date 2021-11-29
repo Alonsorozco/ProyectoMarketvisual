@@ -7,6 +7,7 @@ local:
   root: <%= Rails.root.join("storage") %>
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
+# sw debe crear una variable de entorno para entregar las llaves ( gem figaro)
 amazon:
   service: S3
   access_key_id: "AKIASXEHRGHT562C5FHW"
