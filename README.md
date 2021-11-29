@@ -13,7 +13,7 @@ lo profesionales podran publicar sus servicios indicando valores desde.
 Los usuarios podran cotizar y publicar
 APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.
 
-### Historia De Usuario 🚀
+### Historias De Usuario 🚀
 
 https://trello.com/b/yQPoq2Zp/proyecto-final
 
