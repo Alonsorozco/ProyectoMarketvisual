@@ -64,3 +64,5 @@ gem 'devise'
 gem 'aws-sdk-s3'
 gem 'faker'
 gem 'rails-erd', group: :development
+gem 'bootstrap', '~> 4.6.0'
+gem 'jquery-rails'

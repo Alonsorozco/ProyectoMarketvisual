@@ -1,6 +1,20 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+//palet color
+
+
+//palet color
 body{
-    background:gainsboro;
+    background:(--colorgray);
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3rem ;
+}
+
+.bg-dark{
+
+    background-color: var(--colornavyblue);
 }

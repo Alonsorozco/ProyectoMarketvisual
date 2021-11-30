@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ :root{
+    --colorwhite:FFFFF;
+    --colorgray:DDDDDD;
+    --colordarkblue:125D98;
+    --colornavyblue:3C8DAD;
+    --colororanje:F5A962;
+}
+
+.bg-blue {
+    background: var(--colornavyblue);
+}
