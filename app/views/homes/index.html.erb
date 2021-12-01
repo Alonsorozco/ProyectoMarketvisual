@@ -1,5 +1,6 @@
-<%# carrusel %>
-<div class="container">
+<% if user_signed_in? %>
+<%# carousel %>
+    <div class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-mdb-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-mdb-interval="10000">
@@ -100,5 +101,12 @@
     </div>
     </div>
 </div>
+    
+<% else%>
+    <h2>MarketVisual aplicacion web de busqueda y publicaciones de servicios para profesionales del area audivisual , sonido y musicos profesionales lo usuarios que utilicen esta aplicacion podran evaluar y comentar los servicios y cursos entregados por los profesionales. lo profesionales podran publicar sus servicios indicando valores desde. Los usuarios podran cotizar y publicar APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.</h2>
+<% end%>
+
+
+
 
 
