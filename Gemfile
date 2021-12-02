@@ -67,3 +67,4 @@ gem 'rails-erd', group: :development
 gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 gem 'rails_admin', '~> 2.0'
+gem 'cancancan'

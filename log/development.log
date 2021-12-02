@@ -17262,3 +17262,1648 @@ Processing by RailsAdmin::MainController#dashboard as HTML
 Completed 200 OK in 4467ms (Views: 921.7ms | ActiveRecord: 10.7ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAdminToUsers (20211202033936)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  ↳ db/migrate/20211202033936_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211202033936"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20211128045151)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128045151_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20211128045151_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20211128045151_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128045151"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveStorageTables (20211128045507)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128045507_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/migrate/20211128045507_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20211128045507_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/migrate/20211128045507_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20211128045507_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128045507"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePublications (20211128214338)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "publications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "score" integer, "title" varchar, "description" varchar, "value" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128214338_create_publications.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128214338"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToPublications (20211128215504)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "publications" ADD "user_id" integer[0m
+  ↳ db/migrate/20211128215504_add_user_ref_to_publications.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_publications_on_user_id" ON "publications" ("user_id")[0m
+  ↳ db/migrate/20211128215504_add_user_ref_to_publications.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128215504"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateQuotes (20211128215918)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "phone" integer, "message" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128215918_create_quotes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128215918"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToQuotes (20211128220310)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "quotes" ADD "user_id" integer[0m
+  ↳ db/migrate/20211128220310_add_user_ref_to_quotes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  ↳ db/migrate/20211128220310_add_user_ref_to_quotes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128220310"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddPublicationRefToQuotes (20211128220653)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "quotes" ADD "publication_id" integer[0m
+  ↳ db/migrate/20211128220653_add_publication_ref_to_quotes.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_quotes_on_publication_id" ON "quotes" ("publication_id")[0m
+  ↳ db/migrate/20211128220653_add_publication_ref_to_quotes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128220653"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComents (20211128221151)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "coments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128221151_create_coments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128221151"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddPublicationRefToComents (20211128221711)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "coments" ADD "publication_id" integer[0m
+  ↳ db/migrate/20211128221711_add_publication_ref_to_coments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_coments_on_publication_id" ON "coments" ("publication_id")[0m
+  ↳ db/migrate/20211128221711_add_publication_ref_to_coments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128221711"]]
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToComents (20211128221922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "coments" ADD "user_id" integer[0m
+  ↳ db/migrate/20211128221922_add_user_ref_to_coments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_coments_on_user_id" ON "coments" ("user_id")[0m
+  ↳ db/migrate/20211128221922_add_user_ref_to_coments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128221922"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCategories (20211128222730)
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211128222730_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128222730"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCategoryRefToCategories (20211128223310)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "categories" ADD "category_id" integer[0m
+  ↳ db/migrate/20211128223310_add_category_ref_to_categories.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_category_id" ON "categories" ("category_id")[0m
+  ↳ db/migrate/20211128223310_add_category_ref_to_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128223310"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePublicationCategories (20211128223839)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "publication_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "catergory_id" integer, "pulication_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_089858108e"
+FOREIGN KEY ("catergory_id")
+  REFERENCES "catergories" ("id")
+, CONSTRAINT "fk_rails_43c33a14eb"
+FOREIGN KEY ("pulication_id")
+  REFERENCES "pulications" ("id")
+)[0m
+  ↳ db/migrate/20211128223839_create_publication_categories.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_publication_categories_on_catergory_id" ON "publication_categories" ("catergory_id")[0m
+  ↳ db/migrate/20211128223839_create_publication_categories.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_publication_categories_on_pulication_id" ON "publication_categories" ("pulication_id")[0m
+  ↳ db/migrate/20211128223839_create_publication_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128223839"]]
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddNameToUsers (20211128224259)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (19.1ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  ↳ db/migrate/20211128224259_add_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211128224259"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to RenamePulicationIdFromPublicationCategories (20211129025101)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apublication_categories" ("id" integer NOT NULL PRIMARY KEY, "catergory_id" integer DEFAULT NULL, "publication_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "tindex_apublication_categories_on_pulication_id" ON "apublication_categories" ("publication_id")[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "tindex_apublication_categories_on_catergory_id" ON "apublication_categories" ("catergory_id")[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "apublication_categories" ("id","catergory_id","publication_id","created_at","updated_at")
+                     SELECT "id","catergory_id","pulication_id","created_at","updated_at" FROM "publication_categories"[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "publication_categories"[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "publication_categories" ("id" integer NOT NULL PRIMARY KEY, "catergory_id" integer DEFAULT NULL, "publication_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_publication_categories_on_catergory_id" ON "publication_categories" ("catergory_id")[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_publication_categories_on_pulication_id" ON "publication_categories" ("publication_id")[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "publication_categories" ("id","catergory_id","publication_id","created_at","updated_at")
+                     SELECT "id","catergory_id","publication_id","created_at","updated_at" FROM "apublication_categories"[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "apublication_categories"[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_publication_categories_on_publication_id" ON "publication_categories" ("publication_id")[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mDROP INDEX "index_publication_categories_on_pulication_id"[0m
+  ↳ db/migrate/20211129025101_rename_pulication_id_from_publication_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211129025101"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddAdminToUsers (20211202033936)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  ↳ db/migrate/20211202033936_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211202033936"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-02 03:42:53.715637"], ["updated_at", "2021-12-02 03:42:53.715637"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fabi@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "fabi@gmail.com"], ["encrypted_password", "$2a$12$iuG8axCOjc8wLtHVfOdJzeiBEWUY6fkylQDkSqFaVt.zxIttCHUI."], ["created_at", "2021-12-02 03:43:18.245433"], ["updated_at", "2021-12-02 03:43:18.245433"], ["name", "Panaka"], ["admin", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+[36m  S3 Storage (640.2ms) [0m[32mUploaded file to key: QeLVBpvKBzyAaMXejn31Bo1j (checksum: LFEJEHkDf0mA7peDogyHmw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mActiveStorage::Blob Create (12.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "QeLVBpvKBzyAaMXejn31Bo1j"], ["filename", "name.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 17488], ["checksum", "LFEJEHkDf0mA7peDogyHmw=="], ["created_at", "2021-12-02 03:43:18.970534"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mActiveStorage::Attachment Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-12-02 03:43:19.001705"]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-12-02 03:43:19.005506"], ["id", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:16
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0] Performing ActiveStorage::AnalyzeJob (Job ID: 1e71f19d-3bec-4e19-972d-c6ae5ef402e0) from Inline(default) with arguments: #<GlobalID:0x00007ff03e244ab0 @uri=#<URI::GID gid://tes3/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0] [36m  S3 Storage (173.3ms) [0m[34mDownloaded file from key: QeLVBpvKBzyAaMXejn31Bo1j[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   ↳ db/seeds.rb:16
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   ↳ db/seeds.rb:16
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0]   ↳ db/seeds.rb:16
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1e71f19d-3bec-4e19-972d-c6ae5ef402e0] Performed ActiveStorage::AnalyzeJob (Job ID: 1e71f19d-3bec-4e19-972d-c6ae5ef402e0) from Inline(default) in 186.46ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1e71f19d-3bec-4e19-972d-c6ae5ef402e0) to Inline(default) with arguments: #<GlobalID:0x00007ff03e2c0cc8 @uri=#<URI::GID gid://tes3/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alonso@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "alonso@gmail.com"], ["encrypted_password", "$2a$12$sFjlEG94uresgrWPn5Wm5udzW1pR6i9lhZO6mRhS.oIUCRvKV8lc."], ["created_at", "2021-12-02 03:43:19.523982"], ["updated_at", "2021-12-02 03:43:19.523982"], ["name", "Ben Solo"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+[36m  S3 Storage (228.7ms) [0m[32mUploaded file to key: 9zyncbwowXzycmiPg7nzxF7T (checksum: gjXpa0XZ31TsUCwlcHI1RA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "9zyncbwowXzycmiPg7nzxF7T"], ["filename", "unnamed.jpg"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 35769], ["checksum", "gjXpa0XZ31TsUCwlcHI1RA=="], ["created_at", "2021-12-02 03:43:19.776719"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 2], ["blob_id", 2], ["created_at", "2021-12-02 03:43:19.793766"]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-12-02 03:43:19.796823"], ["id", 2]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:25
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677] Performing ActiveStorage::AnalyzeJob (Job ID: b6c75c53-22fe-4db4-82f1-052c7df51677) from Inline(default) with arguments: #<GlobalID:0x00007ff03e3683b0 @uri=#<URI::GID gid://tes3/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677] [36m  S3 Storage (157.1ms) [0m[34mDownloaded file from key: 9zyncbwowXzycmiPg7nzxF7T[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   ↳ db/seeds.rb:25
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   ↳ db/seeds.rb:25
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677]   ↳ db/seeds.rb:25
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6c75c53-22fe-4db4-82f1-052c7df51677] Performed ActiveStorage::AnalyzeJob (Job ID: b6c75c53-22fe-4db4-82f1-052c7df51677) from Inline(default) in 166.01ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b6c75c53-22fe-4db4-82f1-052c7df51677) to Inline(default) with arguments: #<GlobalID:0x00007ff03dfcbbd0 @uri=#<URI::GID gid://tes3/ActiveStorage::Blob/2>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.6ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 5], ["title", "Mustafar"], ["description", "Sullust"], ["value", 271351], ["created_at", "2021-12-02 03:43:20.028818"], ["updated_at", "2021-12-02 03:43:20.028818"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.5ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 7], ["title", "Ryloth"], ["description", "Dagobah"], ["value", 296725], ["created_at", "2021-12-02 03:43:20.034194"], ["updated_at", "2021-12-02 03:43:20.034194"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.9ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 6], ["title", "Crait"], ["description", "Coruscant"], ["value", 199842], ["created_at", "2021-12-02 03:43:20.038936"], ["updated_at", "2021-12-02 03:43:20.038936"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.5ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 5], ["title", "Hoth"], ["description", "Coruscant"], ["value", 52405], ["created_at", "2021-12-02 03:43:20.044877"], ["updated_at", "2021-12-02 03:43:20.044877"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.4ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 1], ["title", "Ryloth"], ["description", "Starkiller Base"], ["value", 285146], ["created_at", "2021-12-02 03:43:20.049292"], ["updated_at", "2021-12-02 03:43:20.049292"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.8ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 5], ["title", "Mygeeto"], ["description", "Sullust"], ["value", 153234], ["created_at", "2021-12-02 03:43:20.053979"], ["updated_at", "2021-12-02 03:43:20.053979"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.5ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 3], ["title", "Kashyyyk"], ["description", "Yavin 4"], ["value", 96629], ["created_at", "2021-12-02 03:43:20.060286"], ["updated_at", "2021-12-02 03:43:20.060286"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.6ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 3], ["title", "Scarif"], ["description", "Lothal"], ["value", 96761], ["created_at", "2021-12-02 03:43:20.065121"], ["updated_at", "2021-12-02 03:43:20.065121"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.8ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 6], ["title", "Hosnian Prime"], ["description", "Utapau"], ["value", 85498], ["created_at", "2021-12-02 03:43:20.069769"], ["updated_at", "2021-12-02 03:43:20.069769"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPublication Create (0.7ms)[0m  [1m[32mINSERT INTO "publications" ("score", "title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["score", 9], ["title", "Cloud City"], ["description", "Yavin 4"], ["value", 74462], ["created_at", "2021-12-02 03:43:20.075734"], ["updated_at", "2021-12-02 03:43:20.075734"], ["user_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (1.1ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 33473779], ["message", "Eadu"], ["created_at", "2021-12-02 03:43:20.100619"], ["updated_at", "2021-12-02 03:43:20.100619"], ["user_id", 2], ["publication_id", 2]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.9ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 37806563], ["message", "DQar"], ["created_at", "2021-12-02 03:43:20.115828"], ["updated_at", "2021-12-02 03:43:20.115828"], ["user_id", 2], ["publication_id", 1]]
+  ↳ db/seeds.rb:40
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (1.4ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-23"], ["phone", 31372225], ["message", "Scarif"], ["created_at", "2021-12-02 03:43:20.126696"], ["updated_at", "2021-12-02 03:43:20.126696"], ["user_id", 2], ["publication_id", 6]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.9ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 44186808], ["message", "DQar"], ["created_at", "2021-12-02 03:43:20.136026"], ["updated_at", "2021-12-02 03:43:20.136026"], ["user_id", 2], ["publication_id", 9]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.7ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-23"], ["phone", 32689418], ["message", "Starkiller Base"], ["created_at", "2021-12-02 03:43:20.149029"], ["updated_at", "2021-12-02 03:43:20.149029"], ["user_id", 2], ["publication_id", 2]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.5ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-23"], ["phone", 40504860], ["message", "Lothal"], ["created_at", "2021-12-02 03:43:20.157289"], ["updated_at", "2021-12-02 03:43:20.157289"], ["user_id", 2], ["publication_id", 5]]
+  ↳ db/seeds.rb:40
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (1.0ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-23"], ["phone", 37238903], ["message", "Bespin"], ["created_at", "2021-12-02 03:43:20.169415"], ["updated_at", "2021-12-02 03:43:20.169415"], ["user_id", 2], ["publication_id", 8]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.8ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 25816431], ["message", "Cantonica"], ["created_at", "2021-12-02 03:43:20.177667"], ["updated_at", "2021-12-02 03:43:20.177667"], ["user_id", 2], ["publication_id", 8]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (5.7ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 25040635], ["message", "Jakku"], ["created_at", "2021-12-02 03:43:20.190078"], ["updated_at", "2021-12-02 03:43:20.190078"], ["user_id", 2], ["publication_id", 5]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mQuote Create (0.8ms)[0m  [1m[32mINSERT INTO "quotes" ("date", "phone", "message", "created_at", "updated_at", "user_id", "publication_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2014-09-24"], ["phone", 29602963], ["message", "DQar"], ["created_at", "2021-12-02 03:43:20.208509"], ["updated_at", "2021-12-02 03:43:20.208509"], ["user_id", 2], ["publication_id", 10]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (1.5ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Jakku"], ["created_at", "2021-12-02 03:43:20.262207"], ["updated_at", "2021-12-02 03:43:20.262207"], ["publication_id", 8], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.4ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.8ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Cloud City"], ["created_at", "2021-12-02 03:43:20.273714"], ["updated_at", "2021-12-02 03:43:20.273714"], ["publication_id", 9], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.8ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Naboo"], ["created_at", "2021-12-02 03:43:20.287710"], ["updated_at", "2021-12-02 03:43:20.287710"], ["publication_id", 9], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (1.7ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Jedha"], ["created_at", "2021-12-02 03:43:20.299089"], ["updated_at", "2021-12-02 03:43:20.299089"], ["publication_id", 1], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (1.0ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Kashyyyk"], ["created_at", "2021-12-02 03:43:20.317412"], ["updated_at", "2021-12-02 03:43:20.317412"], ["publication_id", 5], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.6ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Hoth"], ["created_at", "2021-12-02 03:43:20.332331"], ["updated_at", "2021-12-02 03:43:20.332331"], ["publication_id", 7], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.8ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Hosnian Prime"], ["created_at", "2021-12-02 03:43:20.346067"], ["updated_at", "2021-12-02 03:43:20.346067"], ["publication_id", 4], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (1.1ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Tatooine"], ["created_at", "2021-12-02 03:43:20.360935"], ["updated_at", "2021-12-02 03:43:20.360935"], ["publication_id", 7], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.7ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Lothal"], ["created_at", "2021-12-02 03:43:20.375070"], ["updated_at", "2021-12-02 03:43:20.375070"], ["publication_id", 5], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mPublication Load (0.1ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mComent Create (0.9ms)[0m  [1m[32mINSERT INTO "coments" ("content", "created_at", "updated_at", "publication_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Cloud City"], ["created_at", "2021-12-02 03:43:20.384496"], ["updated_at", "2021-12-02 03:43:20.384496"], ["publication_id", 7], ["user_id", 2]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Endor"], ["created_at", "2021-12-02 03:43:20.408481"], ["updated_at", "2021-12-02 03:43:20.408481"], ["category_id", 1]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "DQar"], ["created_at", "2021-12-02 03:43:20.414070"], ["updated_at", "2021-12-02 03:43:20.414070"], ["category_id", 5]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Dagobah"], ["created_at", "2021-12-02 03:43:20.425589"], ["updated_at", "2021-12-02 03:43:20.425589"], ["category_id", 1]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Crait"], ["created_at", "2021-12-02 03:43:20.430884"], ["updated_at", "2021-12-02 03:43:20.430884"], ["category_id", 7]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Jedha"], ["created_at", "2021-12-02 03:43:20.435823"], ["updated_at", "2021-12-02 03:43:20.435823"], ["category_id", 1]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Hoth"], ["created_at", "2021-12-02 03:43:20.446217"], ["updated_at", "2021-12-02 03:43:20.446217"], ["category_id", 4]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Starkiller Base"], ["created_at", "2021-12-02 03:43:20.452213"], ["updated_at", "2021-12-02 03:43:20.452213"], ["category_id", 5]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Coruscant"], ["created_at", "2021-12-02 03:43:20.456882"], ["updated_at", "2021-12-02 03:43:20.456882"], ["category_id", 2]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Death Star"], ["created_at", "2021-12-02 03:43:20.466562"], ["updated_at", "2021-12-02 03:43:20.466562"], ["category_id", 4]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Hoth"], ["created_at", "2021-12-02 03:43:20.472561"], ["updated_at", "2021-12-02 03:43:20.472561"], ["category_id", 6]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:44:07 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/_visit.html.erb (0.5ms)
+  Rendered homes/index.html.erb within layouts/application (43.4ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 1393ms (Views: 1378.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:44:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (888.7ms)
+  Rendered shared/_navbar.html.erb (7.8ms)
+  Rendered shared/_footer.html.erb (2.4ms)
+Completed 200 OK in 1137ms (Views: 1133.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:44:20 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gnvb8gOxDGNvoeDfmrt1OgEcZ8poDNyYJ1YC9Qn9fSl2JHI/+QqQJ/x9r1IVCp23TlBE5dRZlCHD6nCRpV+WgQ==", "user"=>{"email"=>"alonso@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alonso@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 341ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:44:20 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (3.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (101.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 188ms (Views: 183.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d/unnamed.jpg" for 127.0.0.1 at 2021-12-02 00:44:20 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d", "filename"=>"unnamed"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (5.5ms) [0m[34mGenerated URL for file at key: 9zyncbwowXzycmiPg7nzxF7T (https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T034420Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d211926b9e7890330661fea092277463d91b10cbf78cc0f144fb986d5aa51e59)[0m
+Redirected to https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T034420Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d211926b9e7890330661fea092277463d91b10cbf78cc0f144fb986d5aa51e59
+Completed 302 Found in 33ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-02 00:44:32 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mComent Load (0.2ms)[0m  [1m[34mSELECT  "coments".* FROM "coments" ORDER BY "coments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "publications"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" ORDER BY "publications"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "publication_categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublicationCategory Load (0.3ms)[0m  [1m[34mSELECT  "publication_categories".* FROM "publication_categories" ORDER BY "publication_categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "quotes"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (43.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (482.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (25.5ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (18.8ms)
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (8.3ms)
+Completed 200 OK in 1075ms (Views: 606.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:53:00 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:53:00 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (3.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (56.3ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 171ms (Views: 165.6ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-02 00:53:02 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HwYD4gUd3KlHsiBNlRThQHbGBuJhJUP/YZb3GaBONKpNynHMhu2sIDr9YGuYIdXk5OWVD93Z8c3+TsWiZbPAvw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:53:02 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.4ms)
+  Rendered homes/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:53:04 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 168ms (Views: 165.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:53:10 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SIC1dcAs0fmM0FPfstRDFZXwajbd+G2+fmmq2UDhy4TUcJLe9ojxr5B8cA9xjpHxlJvsj+zTo1DgjGT8eU3Vxw==", "user"=>{"email"=>"alonso@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alonso@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 340ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:53:10 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (8.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 91.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d/unnamed.jpg" for 127.0.0.1 at 2021-12-02 00:53:10 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d", "filename"=>"unnamed"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.8ms) [0m[34mGenerated URL for file at key: 9zyncbwowXzycmiPg7nzxF7T (https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T035310Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=140776bd5a400828f33fa489485ad97dd3795502aa9b34d668ed6d1604cd442e)[0m
+Redirected to https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T035310Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=140776bd5a400828f33fa489485ad97dd3795502aa9b34d668ed6d1604cd442e
+Completed 302 Found in 34ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-02 00:53:17 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "coments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mComent Load (0.4ms)[0m  [1m[34mSELECT  "coments".* FROM "coments" ORDER BY "coments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "publications"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublication Load (2.0ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" ORDER BY "publications"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "publication_categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublicationCategory Load (0.3ms)[0m  [1m[34mSELECT  "publication_categories".* FROM "publication_categories" ORDER BY "publication_categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "quotes"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (42.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (343.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (12.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (28.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (10.5ms)
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (11.1ms)
+Completed 200 OK in 592ms (Views: 467.6ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-02 00:53:52 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (125.8ms)
+Completed 200 OK in 168ms (Views: 152.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-02 00:54:13 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (203.1ms)
+Completed 200 OK in 232ms (Views: 223.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/quote?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-02 00:54:16 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"quote"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY quotes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (188.2ms)
+Completed 200 OK in 215ms (Views: 204.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publication_category?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-02 00:54:23 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"publication_category"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (66.1ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant PublicationCategory::Catergory):
+     8:   params.delete(:sort) if params[:sort] == @model_config.list.sort_by.to_s
+     9:   export_action = RailsAdmin::Config::Actions.find(:export, { controller: self.controller, abstract_model: @abstract_model })
+    10:   export_action = nil unless export_action && authorized?(export_action.authorization_key, @abstract_model)
+    11:   description = RailsAdmin.config(@abstract_model.model_name).description
+    12:   properties = @model_config.list.with(controller: self.controller, view: self, object: @abstract_model.model.new).visible_fields
+    13:   checkboxes = @model_config.list.checkboxes?
+    14:   # columns paginate
+  
+activerecord (5.2.6) lib/active_record/inheritance.rb:196:in `compute_type'
+activerecord (5.2.6) lib/active_record/reflection.rb:418:in `compute_class'
+activerecord (5.2.6) lib/active_record/reflection.rb:375:in `klass'
+rails_admin (2.2.1) lib/rails_admin/adapters/active_record/association.rb:28:in `klass'
+rails_admin (2.2.1) lib/rails_admin/config/fields/association.rb:71:in `associated_model_config'
+rails_admin (2.2.1) lib/rails_admin/config/fields/association.rb:32:in `block in <class:Association>'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:75:in `instance_eval'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:75:in `block in register_instance_option'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:59:in `block in register_instance_option'
+rails_admin (2.2.1) lib/rails_admin/config/proxyable/proxy.rb:25:in `method_missing'
+rails_admin (2.2.1) lib/rails_admin/config/has_fields.rb:117:in `select'
+rails_admin (2.2.1) lib/rails_admin/config/has_fields.rb:117:in `visible_fields'
+rails_admin (2.2.1) lib/rails_admin/config/proxyable/proxy.rb:25:in `method_missing'
+rails_admin (2.2.1) app/views/rails_admin/main/index.html.haml:11:in `___sers_macbook__rvm_gems_ruby_______rails____gems_rails_admin_______app_views_rails_admin_main_index_html_haml__51174543298475802_40260'
+actionview (5.2.6) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.2.6) lib/active_support/notifications.rb:170:in `instrument'
+actionview (5.2.6) lib/action_view/template.rb:354:in `instrument_render_template'
+actionview (5.2.6) lib/action_view/template.rb:157:in `render'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.2.6) lib/action_view/renderer/abstract_renderer.rb:44:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionview (5.2.6) lib/action_view/renderer/abstract_renderer.rb:43:in `instrument'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:16:in `render'
+actionview (5.2.6) lib/action_view/renderer/renderer.rb:44:in `render_template'
+actionview (5.2.6) lib/action_view/renderer/renderer.rb:25:in `render'
+actionview (5.2.6) lib/action_view/rendering.rb:103:in `_render_template'
+actionpack (5.2.6) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+actionview (5.2.6) lib/action_view/rendering.rb:84:in `render_to_body'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.2.6) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+activesupport (5.2.6) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/Users/macbook/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0/benchmark.rb:308:in `realtime'
+activesupport (5.2.6) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:31:in `cleanup_view_runtime'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:45:in `render'
+remotipart (1.4.4) lib/remotipart/render_overrides.rb:23:in `render'
+rails_admin (2.2.1) lib/rails_admin/config/actions/index.rb:46:in `block (4 levels) in <class:Index>'
+actionpack (5.2.6) lib/action_controller/metal/mime_responds.rb:203:in `respond_to'
+rails_admin (2.2.1) lib/rails_admin/config/actions/index.rb:44:in `block (2 levels) in <class:Index>'
+rails_admin (2.2.1) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (2.2.1) app/controllers/rails_admin/main_controller.rb:22:in `index'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+railties (5.2.6) lib/rails/railtie.rb:190:in `public_send'
+railties (5.2.6) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/publication_category" for 127.0.0.1 at 2021-12-02 00:54:23 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"publication_category"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.1ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant PublicationCategory::Catergory):
+     8:   params.delete(:sort) if params[:sort] == @model_config.list.sort_by.to_s
+     9:   export_action = RailsAdmin::Config::Actions.find(:export, { controller: self.controller, abstract_model: @abstract_model })
+    10:   export_action = nil unless export_action && authorized?(export_action.authorization_key, @abstract_model)
+    11:   description = RailsAdmin.config(@abstract_model.model_name).description
+    12:   properties = @model_config.list.with(controller: self.controller, view: self, object: @abstract_model.model.new).visible_fields
+    13:   checkboxes = @model_config.list.checkboxes?
+    14:   # columns paginate
+  
+activerecord (5.2.6) lib/active_record/inheritance.rb:196:in `compute_type'
+activerecord (5.2.6) lib/active_record/reflection.rb:418:in `compute_class'
+activerecord (5.2.6) lib/active_record/reflection.rb:375:in `klass'
+rails_admin (2.2.1) lib/rails_admin/adapters/active_record/association.rb:28:in `klass'
+rails_admin (2.2.1) lib/rails_admin/config/fields/association.rb:71:in `associated_model_config'
+rails_admin (2.2.1) lib/rails_admin/config/fields/association.rb:32:in `block in <class:Association>'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:75:in `instance_eval'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:75:in `block in register_instance_option'
+rails_admin (2.2.1) lib/rails_admin/config/configurable.rb:59:in `block in register_instance_option'
+rails_admin (2.2.1) lib/rails_admin/config/proxyable/proxy.rb:25:in `method_missing'
+rails_admin (2.2.1) lib/rails_admin/config/has_fields.rb:117:in `select'
+rails_admin (2.2.1) lib/rails_admin/config/has_fields.rb:117:in `visible_fields'
+rails_admin (2.2.1) lib/rails_admin/config/proxyable/proxy.rb:25:in `method_missing'
+rails_admin (2.2.1) app/views/rails_admin/main/index.html.haml:11:in `___sers_macbook__rvm_gems_ruby_______rails____gems_rails_admin_______app_views_rails_admin_main_index_html_haml__51174543298475802_40480'
+actionview (5.2.6) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.2.6) lib/active_support/notifications.rb:170:in `instrument'
+actionview (5.2.6) lib/action_view/template.rb:354:in `instrument_render_template'
+actionview (5.2.6) lib/action_view/template.rb:157:in `render'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.2.6) lib/action_view/renderer/abstract_renderer.rb:44:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionview (5.2.6) lib/action_view/renderer/abstract_renderer.rb:43:in `instrument'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.2.6) lib/action_view/renderer/template_renderer.rb:16:in `render'
+actionview (5.2.6) lib/action_view/renderer/renderer.rb:44:in `render_template'
+actionview (5.2.6) lib/action_view/renderer/renderer.rb:25:in `render'
+actionview (5.2.6) lib/action_view/rendering.rb:103:in `_render_template'
+actionpack (5.2.6) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+actionview (5.2.6) lib/action_view/rendering.rb:84:in `render_to_body'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.2.6) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+activesupport (5.2.6) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/Users/macbook/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0/benchmark.rb:308:in `realtime'
+activesupport (5.2.6) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:31:in `cleanup_view_runtime'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:45:in `render'
+remotipart (1.4.4) lib/remotipart/render_overrides.rb:23:in `render'
+rails_admin (2.2.1) lib/rails_admin/config/actions/index.rb:46:in `block (4 levels) in <class:Index>'
+actionpack (5.2.6) lib/action_controller/metal/mime_responds.rb:203:in `respond_to'
+rails_admin (2.2.1) lib/rails_admin/config/actions/index.rb:44:in `block (2 levels) in <class:Index>'
+rails_admin (2.2.1) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (2.2.1) app/controllers/rails_admin/main_controller.rb:22:in `index'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+railties (5.2.6) lib/rails/railtie.rb:190:in `public_send'
+railties (5.2.6) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/quote" for 127.0.0.1 at 2021-12-02 00:54:27 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"quote"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY quotes.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (136.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (236.6ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (18.8ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (14.6ms)
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (10.4ms)
+Completed 200 OK in 452ms (Views: 448.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/coment?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-02 00:54:29 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"coment"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mComent Load (1.1ms)[0m  [1m[34mSELECT  "coments".* FROM "coments" ORDER BY coments.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublication Load (0.4ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."id" IN (?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["id", 5], ["id", 4], ["id", 1], ["id", 9], ["id", 8]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (171.4ms)
+Completed 200 OK in 202ms (Views: 191.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:56:21 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (45.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (266.1ms)
+  Rendered shared/_footer.html.erb (3.5ms)
+Completed 200 OK in 1697ms (Views: 1676.8ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-02 00:56:25 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AAJwZVS7AmKD8p2iF6iEKqtX1e08bEqzgyS11zFDt6cIBIiaCbBBYDYIjdw2u6quAyG9uKeEEVg98a5tIy0uaw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 450ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:56:25 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.4ms)
+  Rendered homes/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:56:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 115ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:56:52 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hggxHx+PcrZjaSNxe7cyVncahjCJulAJn8a1LlvM+OYfAnqRuzJlylhvzMORqceGIMVXvFeKuMZGXM0vfUmdSg==", "user"=>{"email"=>"alonso@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alonso@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 347ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:56:52 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (2.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (4.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-02 00:57:00 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+cancancan (3.3.0) lib/cancan/ability.rb:180:in `authorize!'
+rails_admin (2.2.1) lib/rails_admin/extensions/cancancan/authorization_adapter.rb:19:in `initialize'
+rails_admin (2.2.1) lib/rails_admin/config.rb:157:in `new'
+rails_admin (2.2.1) lib/rails_admin/config.rb:157:in `block in authorize_with'
+rails_admin (2.2.1) app/controllers/rails_admin/application_controller.rb:56:in `instance_eval'
+rails_admin (2.2.1) app/controllers/rails_admin/application_controller.rb:56:in `_authorize!'
+activesupport (5.2.6) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.6) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.6) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.6) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+railties (5.2.6) lib/rails/railtie.rb:190:in `public_send'
+railties (5.2.6) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-02 00:58:02 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lX9hP56PjZ9zL1PvWpl5wxxjrjJVgp+nQ/MRawWweLFL1LxSbfGd8tbp+DFxo3HG1qtik56r0qJtJg/sS0yHvA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:58:02 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.3ms)
+  Rendered homes/index.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:58:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 131ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:58:52 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tnChflrytyE8s5Gh5BO9mpt9SOC3OXxSmNyjwkvU4pII/Fz78cWdVx/tlURnZJZOpyZqgTXmsQJja3CzUCSB6Q==", "user"=>{"email"=>"fabi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "fabi@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 320ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:58:52 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:17
+  Rendered shared/_navbar.html.erb (5.5ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d40fe90a66fb30f8860cf39d78c19574dc5aeb08/name.jpg" for 127.0.0.1 at 2021-12-02 00:58:53 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d40fe90a66fb30f8860cf39d78c19574dc5aeb08", "filename"=>"name"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.6ms) [0m[34mGenerated URL for file at key: QeLVBpvKBzyAaMXejn31Bo1j (https://marketvisual.s3.sa-east-1.amazonaws.com/QeLVBpvKBzyAaMXejn31Bo1j?response-content-disposition=inline%3B%20filename%3D%22name.jpg%22%3B%20filename%2A%3DUTF-8%27%27name.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T035853Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4c8736bf4ef9195da0654690d203ac944fa82d09c6a432a3e3566c4b60813a5f)[0m
+Redirected to https://marketvisual.s3.sa-east-1.amazonaws.com/QeLVBpvKBzyAaMXejn31Bo1j?response-content-disposition=inline%3B%20filename%3D%22name.jpg%22%3B%20filename%2A%3DUTF-8%27%27name.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211202%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211202T035853Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4c8736bf4ef9195da0654690d203ac944fa82d09c6a432a3e3566c4b60813a5f
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-02 00:59:01 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "coments"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mComent Load (0.2ms)[0m  [1m[34mSELECT  "coments".* FROM "coments" ORDER BY "coments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "publications"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" ORDER BY "publications"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "publication_categories"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPublicationCategory Load (0.2ms)[0m  [1m[34mSELECT  "publication_categories".* FROM "publication_categories" ORDER BY "publication_categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "quotes"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (48.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (328.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (12.7ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (28.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (23.4ms)
+  Rendering /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (12.1ms)
+Completed 200 OK in 922ms (Views: 475.7ms | ActiveRecord: 12.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-02 00:59:12 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3mjOSqSpCx+mls8tKs9ieXxaawgDdfiBN1G7viNXStLu5OLJFLZN3nShd9aF6kWbpukbybLEIPwvPdyv0Lab3w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:59:12 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (1.1ms)
+  Rendered homes/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:59:32 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.9ms)
+  Rendered homes/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 114ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 00:59:35 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.7ms)
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 182ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 00:59:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 01:06:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 115ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-02 01:07:53 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 139ms (Views: 137.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 01:07:58 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/_visit.html.erb (0.4ms)
+  Rendered homes/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+

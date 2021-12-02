@@ -10,6 +10,7 @@ require 'faker'
         @user = User.create(
                     name: Faker::Movies::StarWars.character,
                     email: "fabi@gmail.com",
+                    admin: true,
                     password: "123123",
                     password_confirmation: "123123")
         @user.avatar.attach(io: File.open(Rails.root.join('app/assets/images/name.jpg')),
@@ -18,6 +19,7 @@ require 'faker'
         @usertwo = User.create(
                 name: Faker::Movies::StarWars.character,
                 email: "alonso@gmail.com",
+                admin: false,
                 password: "123123",
                 password_confirmation: "123123")
         @usertwo.avatar.attach(io: File.open(Rails.root.join('app/assets/images/unnamed.png')),
