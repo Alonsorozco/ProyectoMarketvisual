@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  resources :quotes
+  resources :publications
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'profile/:id', to: 'users#show', as:'profile'
   resources :users, only: %i[edit update] 

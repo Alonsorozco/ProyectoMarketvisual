@@ -15,7 +15,7 @@
 
 <% if  user_signed_in? %>
      <!-- imagen de perfil-->
-    <a class="navbar-brand " href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%><a>
+    <a class="navbar-brand animation-target" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%><a>
     <!-- menu de perfil-->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -25,8 +25,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#"><%= link_to '  Perfil', profile_path(current_user.id), class:"nav-link text-secondary " %></a>
-            <a class="dropdown-item" href="#">Tus Cotizaciones</a>
-            <a class="dropdown-item" href="#">Tus Publicaciones</a>
+            <a class="dropdown-item" href="#"><%= link_to 'Tus Cotizaciones', quotes_path(current_user.id), class:"nav-link text-secondary " %></a>
+            <a class="dropdown-item" href="#"><%= link_to 'Tus Publicaciones', publications_path(current_user.id), class:"nav-link text-secondary " %></a>
         </li>
     </ul>
 </div>
@@ -47,6 +47,12 @@
                 <li class="nav-item">
                     <%= link_to 'Home',root_path, class:"nav-link" %>
                 </li>
+                    <li class="nav-item">
+                    <%= link_to 'Publicar',root_path, class:"nav-link" %>
+                </li>
+                 <li class="nav-item">
+                    <%= link_to 'Cotizar',root_path, class:"nav-link" %>
+                </li>
                 <li>
                     <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link" %>
                 </li>
@@ -60,6 +66,7 @@
                 <li class="nav-item">
                     <%= link_to 'Registrate',new_user_registration_path, class:"nav-link" %>
                 </li>
+             
                 <li class="nav-item">
                     <%= link_to 'Inicia Sesion',user_session_path, class:"nav-link" %>
                 </li>
