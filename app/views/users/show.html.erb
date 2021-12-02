@@ -1,0 +1,28 @@
+<h1>Perfil De Usuario</h1>
+
+<table>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <div id='user'>
+        <td> <%= current_user.name %></td>
+        <td>  <%= current_user.email %></td>
+      </div>
+    </tr>
+</table>
+
+  <div id='new_bookmark_btn' class="py-3">
+    <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>
+  </div>
+
+
+
+
+
+
+
+
+
+
