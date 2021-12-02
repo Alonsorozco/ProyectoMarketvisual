@@ -1,16 +1,20 @@
 <h1>Perfil De Usuario</h1>
 
-<table>
+<table class="table">
+  <thead class="table-dark">
     <tr>
       <th>Nombre</th>
       <th>Email</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <div id='user'>
         <td> <%= current_user.name %></td>
         <td>  <%= current_user.email %></td>
       </div>
     </tr>
+  </tbody>
 </table>
 
   <div id='new_bookmark_btn' class="py-3">

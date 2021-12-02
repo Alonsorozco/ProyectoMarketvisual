@@ -11,11 +11,25 @@
   <rect x="16" y="5" width="4" height="6" rx="1" />
   <line x1="18" y1="4" x2="18" y2="5" />
   <line x1="18" y1="11" x2="18" y2="20" />
-</svg>MARKETVISUAL</a>
+</svg>MARKETVISUAL<%root_path%></a>
 
 <% if  user_signed_in? %>
-    <a class="navbar-brand " href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%> Hola @ <%=current_user.name%> <a>
-
+     <!-- imagen de perfil-->
+    <a class="navbar-brand " href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%><a>
+    <!-- menu de perfil-->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Hola@ 
+            <%= current_user.name%>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><%= link_to '  Perfil', profile_path(current_user.id), class:"nav-link text-secondary " %></a>
+            <a class="dropdown-item" href="#">Tus Cotizaciones</a>
+            <a class="dropdown-item" href="#">Tus Publicaciones</a>
+        </li>
+    </ul>
+</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,13 +42,10 @@
                 <!-- barra de busqueda y boton-->
         <%= form_with(url:root_path, method: :get, local: :true, class: 'form-inline') do %>
         <%= text_field_tag :q, "", class: 'form-control mr-sm-1' %>
-        <%= submit_tag( "Buscar", Class: 'btn btn-outline-success my-1 my-sm-0 ' )%>
+        <%= submit_tag( "Buscar", Class: 'btn btn-outline-dark my-1 my-sm-0 ' )%>
 <%end%>
                 <li class="nav-item">
                     <%= link_to 'Home',root_path, class:"nav-link" %>
-                </li>
-                <li>
-                    <%= link_to 'Perfil', profile_path(current_user.id), class:"nav-link" %>
                 </li>
                 <li>
                     <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link" %>
