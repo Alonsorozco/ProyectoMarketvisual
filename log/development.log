@@ -27804,3 +27804,468 @@ Migrating to AddAdminToUsers (20211202033936)
   ↳ bin/rails:9
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2021-12-02 22:10:51 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (38.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (79.3ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 738ms (Views: 723.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d/unnamed.jpg" for 127.0.0.1 at 2021-12-02 22:10:52 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d", "filename"=>"unnamed"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (6.1ms) [0m[34mGenerated URL for file at key: 9zyncbwowXzycmiPg7nzxF7T (https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211203%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211203T011052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=268c20e7fd9aac6d642b94929fa9a16e8018cfc853b4c560d3f2080d857afdf8)[0m
+Redirected to https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211203%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211203T011052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=268c20e7fd9aac6d642b94929fa9a16e8018cfc853b4c560d3f2080d857afdf8
+Completed 302 Found in 16ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-12-02 22:10:56 -0300
+Processing by PublicationsController#make_post as HTML
+  Rendering publications/make_post.html.erb within layouts/application
+  Rendered publications/_form.html.erb (6.8ms)
+  Rendered publications/make_post.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (22.3ms)
+  Rendered shared/_footer.html.erb (10.3ms)
+Completed 200 OK in 185ms (Views: 141.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/publications" for 127.0.0.1 at 2021-12-02 22:11:01 -0300
+Processing by PublicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0qjgwyEHN7S9ONVdR+pfbDnDzrtk40wMBqoHI+zxCf5I7siIYifMSn918/x1bEacVkniQkr10uu6DS4jLJ7PA==", "publication"=>{"title"=>"yty", "description"=>"tyt", "value"=>"20"}, "commit"=>"Create Publication"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publications_controller.rb:18
+  [1m[36mPublication Create (1.9ms)[0m  [1m[32mINSERT INTO "publications" ("title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "yty"], ["description", "tyt"], ["value", 20], ["created_at", "2021-12-03 01:11:01.869765"], ["updated_at", "2021-12-03 01:11:01.869765"], ["user_id", 2]]
+  ↳ app/controllers/publications_controller.rb:18
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publications_controller.rb:18
+Redirected to http://localhost:3000/publications/19
+Completed 302 Found in 20ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/publications/19" for 127.0.0.1 at 2021-12-02 22:11:01 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:40
+  Rendering publications/show.html.erb within layouts/application
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/show.html.erb:14
+  Rendered publications/show.html.erb within layouts/application (5.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (6.9ms)
+  Rendered shared/_footer.html.erb (1.5ms)
+Completed 200 OK in 106ms (Views: 98.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/publications/11" for 127.0.0.1 at 2021-12-02 22:11:07 -0300
+Processing by PublicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PgNNNv+I8a71YLd7tSspjeti6TT6jLbhbLqqMCG1pF1mGCHMmk7PnckV8jHbQXuUIc09Mczlw2ZDXnRtKl8m0g==", "id"=>"11"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/publications_controller.rb:30:in `destroy'
+Started GET "/publications/11" for 127.0.0.1 at 2021-12-02 22:14:18 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:40
+  Rendering publications/show.html.erb within layouts/application
+  [1m[36mPublication Load (0.9ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/show.html.erb:14
+  Rendered publications/show.html.erb within layouts/application (14.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (279.4ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 696ms (Views: 608.3ms | ActiveRecord: 11.8ms)
+
+
+Started DELETE "/publications/11" for 127.0.0.1 at 2021-12-02 22:14:23 -0300
+Processing by PublicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CXMK0UW1E6h4bqOco/7kIJoLscAeFAJZ8RyDK5tH5NBRaGYrIHMtm0Qb5tbNlLY5UKRlxSh9d97e+F12kK1mXw==", "id"=>"11"}
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[36mPublication Destroy (9.5ms)[0m  [1m[31mDELETE FROM "publications" WHERE "publications"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 12.8ms)
+
+
+  
+NameError (undefined local variable or method `wines_url' for #<PublicationsController:0x00007fcb3a078c50>):
+  
+app/controllers/publications_controller.rb:32:in `block (2 levels) in destroy'
+app/controllers/publications_controller.rb:31:in `destroy'
+Started GET "/publications/11" for 127.0.0.1 at 2021-12-02 22:15:45 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+Completed 404 Not Found in 36ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Publication with 'id'=11):
+  
+app/controllers/publications_controller.rb:46:in `set_publication'
+Started GET "/" for 127.0.0.1 at 2021-12-02 22:15:58 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (33.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (196.6ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 417ms (Views: 408.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d/unnamed.jpg" for 127.0.0.1 at 2021-12-02 22:15:59 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f81605c415d3223cdaf222cd4bea61ff3566650d", "filename"=>"unnamed"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/macbook/.rvm/gems/ruby-2.7.3@rails526/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.5ms) [0m[34mGenerated URL for file at key: 9zyncbwowXzycmiPg7nzxF7T (https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211203%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211203T011559Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7877f3b430943519f6c9d7f55c4cc4425bfa83d394a858e324854a193139ca5a)[0m
+Redirected to https://marketvisual.s3.sa-east-1.amazonaws.com/9zyncbwowXzycmiPg7nzxF7T?response-content-disposition=inline%3B%20filename%3D%22unnamed.jpg%22%3B%20filename%2A%3DUTF-8%27%27unnamed.jpg&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASXEHRGHT562C5FHW%2F20211203%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211203T011559Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7877f3b430943519f6c9d7f55c4cc4425bfa83d394a858e324854a193139ca5a
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-12-02 22:16:00 -0300
+Processing by PublicationsController#make_post as HTML
+  Rendering publications/make_post.html.erb within layouts/application
+  Rendered publications/_form.html.erb (5.5ms)
+  Rendered publications/make_post.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (13.6ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 210ms (Views: 183.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile/2" for 127.0.0.1 at 2021-12-02 22:16:04 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/quotes/_quotes.html.erb:1
+  Rendered quotes/_quotes.html.erb (30.0ms)
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/_mypublications.html.erb:1
+  Rendered publications/_mypublications.html.erb (12.5ms)
+  Rendered users/show.html.erb within layouts/application (49.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (11.7ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 189ms (Views: 160.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/publications/12" for 127.0.0.1 at 2021-12-02 22:16:10 -0300
+Processing by PublicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JzCV9m30XWrWGPVJPR+jt96cTVTRGCbd481r6CbEs8h/K/kMCDJjWeptsANTdfGuFDOZUedxU1rMKbW1LS4xRw==", "id"=>"12"}
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[36mPublication Destroy (1.9ms)[0m  [1m[31mDELETE FROM "publications" WHERE "publications"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+Redirected to http://localhost:3000/publications/12
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/publications/12" for 127.0.0.1 at 2021-12-02 22:16:10 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Publication with 'id'=12):
+  
+app/controllers/publications_controller.rb:46:in `set_publication'
+Started GET "/publications/12" for 127.0.0.1 at 2021-12-02 22:17:30 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+Completed 404 Not Found in 24ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Publication with 'id'=12):
+  
+app/controllers/publications_controller.rb:46:in `set_publication'
+Started GET "/" for 127.0.0.1 at 2021-12-02 22:17:34 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (35.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (139.1ms)
+  Rendered shared/_footer.html.erb (2.1ms)
+Completed 200 OK in 330ms (Views: 319.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/profile/2" for 127.0.0.1 at 2021-12-02 22:17:37 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/quotes/_quotes.html.erb:1
+  Rendered quotes/_quotes.html.erb (45.1ms)
+  [1m[36mPublication Load (0.3ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/_mypublications.html.erb:1
+  Rendered publications/_mypublications.html.erb (22.7ms)
+  Rendered users/show.html.erb within layouts/application (74.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (8.6ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 226ms (Views: 195.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-12-02 22:17:51 -0300
+Processing by PublicationsController#make_post as HTML
+  Rendering publications/make_post.html.erb within layouts/application
+  Rendered publications/_form.html.erb (5.0ms)
+  Rendered publications/make_post.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (9.7ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 130ms (Views: 119.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/publications" for 127.0.0.1 at 2021-12-02 22:17:58 -0300
+Processing by PublicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e6l3zaWs89wjNADqoxkbiNGdwC5hlTDkMpzQ6LdXW/whwG9siKBwM9g9NHAn0wPvECPonYUtap+sbkxMtFbk5w==", "publication"=>{"title"=>"dsds", "description"=>"dsds", "value"=>"20000"}, "commit"=>"Create Publication"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publications_controller.rb:18
+  [1m[36mPublication Create (0.7ms)[0m  [1m[32mINSERT INTO "publications" ("title", "description", "value", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "dsds"], ["description", "dsds"], ["value", 20000], ["created_at", "2021-12-03 01:17:58.326502"], ["updated_at", "2021-12-03 01:17:58.326502"], ["user_id", 2]]
+  ↳ app/controllers/publications_controller.rb:18
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publications_controller.rb:18
+Redirected to http://localhost:3000/publications/20
+Completed 302 Found in 85ms (ActiveRecord: 79.4ms)
+
+
+Started GET "/publications/20" for 127.0.0.1 at 2021-12-02 22:17:58 -0300
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:40
+  Rendering publications/show.html.erb within layouts/application
+  [1m[36mPublication Load (0.4ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/show.html.erb:14
+  Rendered publications/show.html.erb within layouts/application (7.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (7.6ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 178ms (Views: 101.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/publications/13" for 127.0.0.1 at 2021-12-02 22:18:04 -0300
+Processing by PublicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BfywHR1IK1a4jW9UjDAuJGdVj24nU+3XC7z/Br8xampd59zneI4VZYT4Kh7iWnw9rfpbaxE6mFAkWCFbtNvo5Q==", "id"=>"13"}
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT  "publications".* FROM "publications" WHERE "publications"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/publications_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[36mPublication Destroy (1.1ms)[0m  [1m[31mDELETE FROM "publications" WHERE "publications"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/publications_controller.rb:30
+  [1m[35m (406.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publications_controller.rb:30
+Redirected to http://localhost:3000/
+Completed 302 Found in 417ms (ActiveRecord: 407.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-02 22:18:05 -0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/homes/index.html.erb:1
+  Rendered homes/index.html.erb within layouts/application (2.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (9.5ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 173ms (Views: 114.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile/2" for 127.0.0.1 at 2021-12-02 22:18:11 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/quotes/_quotes.html.erb:1
+  Rendered quotes/_quotes.html.erb (11.0ms)
+  [1m[36mPublication Load (0.2ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/_mypublications.html.erb:1
+  Rendered publications/_mypublications.html.erb (7.0ms)
+  Rendered users/show.html.erb within layouts/application (23.8ms)
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (11.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 147ms (Views: 138.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/profile/2" for 127.0.0.1 at 2021-12-02 22:19:16 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/quotes/_quotes.html.erb:1
+  Rendered quotes/_quotes.html.erb (19.9ms)
+  [1m[36mPublication Load (3.2ms)[0m  [1m[34mSELECT "publications".* FROM "publications" WHERE "publications"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/publications/_mypublications.html.erb:1
+  Rendered publications/_mypublications.html.erb (19.1ms)
+  Rendered users/show.html.erb within layouts/application (47.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:18
+  Rendered shared/_navbar.html.erb (9.1ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 191ms (Views: 182.5ms | ActiveRecord: 4.6ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRatingCaches (20211203012809)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20211203012809_create_rating_caches.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "rating_caches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cacheable_type" varchar, "cacheable_id" integer, "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211203012809_create_rating_caches.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_rating_caches_on_cacheable_type_and_cacheable_id" ON "rating_caches" ("cacheable_type", "cacheable_id")[0m
+  ↳ db/migrate/20211203012809_create_rating_caches.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_rating_caches_on_cacheable_id_and_cacheable_type" ON "rating_caches" ("cacheable_id", "cacheable_type")[0m
+  ↳ db/migrate/20211203012809_create_rating_caches.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211203012809"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRates (20211203012810)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211203012810"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateAverageCaches (20211203012811)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "average_caches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "rater_id" integer, "rateable_type" varchar, "rateable_id" integer, "avg" float NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211203012811_create_average_caches.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_average_caches_on_rater_id" ON "average_caches" ("rater_id")[0m
+  ↳ db/migrate/20211203012811_create_average_caches.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_average_caches_on_rateable_type_and_rateable_id" ON "average_caches" ("rateable_type", "rateable_id")[0m
+  ↳ db/migrate/20211203012811_create_average_caches.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (8.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211203012811"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateOverallAverages (20211203012812)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "overall_averages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "rateable_type" varchar, "rateable_id" integer, "overall_avg" float NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211203012812_create_overall_averages.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_overall_averages_on_rateable_type_and_rateable_id" ON "overall_averages" ("rateable_type", "rateable_id")[0m
+  ↳ db/migrate/20211203012812_create_overall_averages.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211203012812"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

@@ -1,5 +1,5 @@
 class PublicationsController < ApplicationController
-  before_action :set_publication, only: %i[ show  ]
+  before_action :set_publication, only: %i[ show destroy ]
   
   def index
     @user_publications = current_user.publications
@@ -29,7 +29,7 @@ class PublicationsController < ApplicationController
   def destroy
     @publication.destroy
     respond_to do |format|
-      format.html { redirect_to wines_url, notice: "eliminaste la publicacion." }
+      format.html { redirect_to root_path, notice: "eliminaste la publicacion." }
       format.json { head :no_content }
     end
   end
