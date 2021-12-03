@@ -25,8 +25,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#"><%= link_to '  Perfil', profile_path(current_user.id), class:"nav-link text-secondary " %></a>
-            <a class="dropdown-item" href="#"><%= link_to 'Tus Cotizaciones', quotes_path(current_user.id), class:"nav-link text-secondary " %></a>
-            <a class="dropdown-item" href="#"><%= link_to 'Tus Publicaciones', publications_path(current_user.id), class:"nav-link text-secondary " %></a>
         </li>
     </ul>
 </div>
@@ -48,7 +46,7 @@
                     <%= link_to 'Home',root_path, class:"nav-link" %>
                 </li>
                     <li class="nav-item">
-                    <%= link_to 'Publicar',root_path, class:"nav-link" %>
+                    <%= link_to 'Publicar',post_path, class:"nav-link" %>
                 </li>
                  <li class="nav-item">
                     <%= link_to 'Cotizar',root_path, class:"nav-link" %>

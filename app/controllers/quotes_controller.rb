@@ -2,7 +2,6 @@ class QuotesController < ApplicationController
   before_action :set_user, only: %i[ show  ]
 
   def index
-    
     @user_quotes = current_user.quotes
   end
 

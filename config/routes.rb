@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   resources :quotes
   resources :publications
+  get "post", to: 'publications#make_post', as: 'post'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'profile/:id', to: 'users#show', as:'profile'
   resources :users, only: %i[edit update] 

@@ -12,16 +12,7 @@
     </thead>
 
     <tbody>
-        <% @user_quotes.each do |quote| %>
-        <tr>
-            <td><%= quote.message%></td>
-            <td><%= quote.phone%></td>
-            <td><%= quote.date%></td>
-            <td><%= link_to 'Show', quote %></td>
-            <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-            <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
+        <%= render "quotes/quotes" %>
     </tbody>
 </table>
 

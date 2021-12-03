@@ -217,6 +217,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
     rake (13.0.6)
+    ratyrate (1.2.2.alpha)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -310,6 +311,7 @@ DEPENDENCIES
   rails (~> 5.2.6)
   rails-erd
   rails_admin (~> 2.0)
+  ratyrate
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

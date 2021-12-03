@@ -29,3 +29,7 @@
 .bg-orange{
     background: var(--colororanje);
 }
+
+.bg-gray{
+    background: var(--colorgray);
+}
