@@ -8,6 +8,11 @@ class QuotesController < ApplicationController
   def show
   end
 
+  def def create
+    
+    @quotes.publication_id = current_user
+
+  end
 
   private
   def set_user

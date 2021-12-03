@@ -3,8 +3,8 @@
         <td><%= publication.title%></td>
         <td><%= publication.description%></td>
         <td><%= publication.value%></td>
-        <td><%= link_to 'Show', publication %></td>
+        <td><%= link_to 'Ver', publication %></td>
         <td><%= link_to 'Edit', edit_quote_path(publication) %></td>
-        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', publication, method: :delete, data: { confirm: 'Desea eliminar las publicacion?' } %></td>
     </tr>
 <% end %>

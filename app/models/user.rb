@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :quotes
   has_many :publications
   has_many :coments
+  ratyrate_rater
 end

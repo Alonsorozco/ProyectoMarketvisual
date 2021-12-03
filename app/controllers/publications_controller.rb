@@ -13,11 +13,14 @@ class PublicationsController < ApplicationController
   def create
 
     @publication = Publication.new(publication_params)
+    #publicaciones pertenece a un usuario, por que lo necesita un id de usuarios
+    #por lo que le pasamos el id del usuario que esta esta creando la publicacion
+    #o sea, current_user
     @publication.user = current_user
     respond_to do |format|
       if @publication.save!
-        format.html { redirect_to @publication, notice: "has publicado" }
-        format.json { render :show, status: :created, location: @publication }
+        format.html { redirect_to publications_path @publication, notice: "has publicado" }
+        format.json { render :index, status: :created, location: @publication }
       else
         format.html { render :show, status: :unprocessable_entity }
         format.json { render json: @publication.errors, status: :unprocessable_entity }
@@ -29,7 +32,7 @@ class PublicationsController < ApplicationController
   def destroy
     @publication.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: "eliminaste la publicacion." }
+      format.html { redirect_to publications_path, notice: "cancelaste una publicacion." }
       format.json { head :no_content }
     end
   end

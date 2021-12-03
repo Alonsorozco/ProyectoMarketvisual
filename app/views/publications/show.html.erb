@@ -1,26 +1,11 @@
 <h1> Tus Publicaciones</h1>
 
-<table class ="table">
-    <thead class ="table-dark">
-        <tr>
-        <th>Titulo</th>
-        <th>Descripcion</th>
-        <th>Valor</th>
-        <th colspan="3"></th>
-        </tr>
-    </thead>
 
-    <tbody>
-        <% @user_publications.each do |publication| %>
-        <tr>
-            <td><%= publication.title%></td>
-            <td><%= publication.description%></td>
-            <td><%= publication.value%></td>
-            <td><%= link_to 'Show', publication %></td>
-            <td><%= link_to 'Edit', edit_quote_path(publication) %></td>
-            <td><%= link_to 'Cancelar', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
 
+<%= @publication.title %>
+<%= @publication.value %>
+<%= @publication.description %>
+
+Speed  : <%= rating_for @publication, 'speed' %>
+Engine : <%= rating_for @publication, 'engine' %>
+Price  : <%= rating_for @publication, 'price' %>
