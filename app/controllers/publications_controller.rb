@@ -1,9 +1,11 @@
 class PublicationsController < ApplicationController
-  before_action :set_publication, only: %i[ show destroy ]
+  before_action :set_publication, only: %i[ show edit update destroy ]
   
   def index
     @user_publications = current_user.publications
-  
+  end
+
+  def edit
   end
 
   def make_post
@@ -27,6 +29,18 @@ class PublicationsController < ApplicationController
       end
     end
     
+  end
+
+  def update
+    respond_to do |format|
+      if @publication.update(publication_params)
+        format.html { redirect_to profile_path(current_user.id), notice: "La publicacion fue actualizada"}
+        format.json { render :show, status: :ok, location: @publication }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @publication.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
