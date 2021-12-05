@@ -1,3 +1,5 @@
+<p id="notice" class="text-center mr-5 font-weight-bold bg-success"><%= notice %></p>
+
 <% if user_signed_in? %>
 <%# carousel %>
     <div class="container">
@@ -44,37 +46,37 @@
         <span class="visually-hidden">Next</span>
     </button>
     </div>
-</div>
-<%# card%>
+    </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm pt-3">
-            <%= @publications.each do |publication| %>
-                <div class="col-12 pt-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= publication.title %></h5>
-                            <p class="card-text"><%= publication.description %></p>
-                            <a href="#" > <%= link_to 'Ver', publication ,class:"btn btn-primary"%></a>
-                            <a href="#" > <%= link_to 'Cotizar', new_quote_path(publication.id),class:"btn btn-primary"%></a>
+
+<%# card%>
+    <div class="container mt-3">
+        <h1>Ultimas Publicaciones</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm pt-3">
+                <%@publications.each do |publication| %>
+                    <div class="col-12 pt-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= publication.title %></h5>
+                                <p class="card-text"><%= publication.description %></p>
+                                <a href="#" > <%= link_to 'Ver', publication ,class:"btn btn-primary"%></a>
+                                <a href="#" > <%= link_to 'Cotizar', new_quote_path(publication.id),class:"btn btn-primary"%></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-             <% end %>
-        </div>   
-    </div>
-</div> 
-
-
-
-
-    
+                <% end %>
+            </div>   
+        </div>
+    </div> 
 <% else%>
-<div class = "container text-center">
-    <%= render "homes/visit" %>
-</div>
+<%# vista visitas %>
+    <div class = "container text-center">
+        <%= render "homes/visit" %>
+    </div>
     
 <% end%>
 

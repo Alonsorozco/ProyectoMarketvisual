@@ -1,10 +1,22 @@
- <% @user_publications.each do |publication| %>
-    <tr>
-        <td><%= publication.title%></td>
-        <td><%= publication.description%></td>
-        <td><%= publication.value%></td>
-        <td><%= link_to 'Ver', publication %></td>
-        <td><%= link_to 'Editar', edit_publication_path(publication) %></td>
-        <td><%= link_to 'Eliminar', publication, method: :delete, data: { confirm: 'Desea eliminar las publicacion?' } %></td>
-    </tr>
-<% end %>
+<div class="container">
+    <div class="row">
+        <div class="col-sm pt-3">
+            <%@user_publications.each do |publication| %>
+                <div class="col-12 pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> Titulo: <%= publication.title%></h5>
+                            <p class="card-text"> Descripcion: <%= publication.description%></p>
+                            <%= link_to 'Ver',publication,class:"btn btn-primary"%>
+                            <%= link_to 'Editar', edit_publication_path(publication),class:"btn btn-primary" %>
+                            <%= link_to 'Cancelar', publication,class:"btn btn-primary", method: :delete, data: { confirm: 'Deseas cancelar la cotizacion?' } %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>   
+    </div>
+</div> 
+
+

@@ -1,39 +1,26 @@
-<h1>Perfil De Usuario</h1>
+<p id="notice" class="text-center mr-5 bg-success"><%= notice %></p>
+<div class="container text-center">
+  <h1>Perfil De Usuario</h1>
+  <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar perfilimg border border-primary "%><%root_path%><a>
 
-<table class="table">
-  <thead class="table-dark">
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <div id='user'>
-        <td> <%= current_user.name %></td>
-        <td>  <%= current_user.email %></td>
-      </div>
-    </tr>
-  </tbody>
-</table>
-
+  <ul class="list-group "id='user'>
+    <li class="list-group-item">Nombre:  <%= current_user.name %></li>
+    <li class="list-group-item">Correo:  <%= current_user.email %></li>
+  </ul>
   <div id='new_bookmark_btn' class="py-3">
-    <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>
+      <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>
   </div>
+</div>
+
 
 
 
 <h1> Tus Cotizaciones</h1>
-
         <%= render "quotes/quotes" %>
- 
-
 <br>
 
 <h1> Tus Publicaciones</h1>
-
             <%= render "publications/mypublications" %>
-
 <br>
 
 

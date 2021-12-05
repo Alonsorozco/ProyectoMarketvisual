@@ -17,7 +17,7 @@ class QuotesController < ApplicationController
     @quote.user_id= current_user.id
     respond_to do |format|
       if @quote.save!
-        format.html { redirect_to quotes_path @quote, notice: "has cotizado" }
+        format.html { redirect_to profile_path(current_user.id),notice: "Felicitacion has cotizado" }
         format.json { render :index, status: :created, location: @quote}
       else
         format.html { render :show, status: :unprocessable_entity }
