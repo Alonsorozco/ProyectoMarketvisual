@@ -21,41 +21,18 @@
     <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>
   </div>
 
+
+
 <h1> Tus Cotizaciones</h1>
 
-<table class ="table">
-    <thead class ="table-dark">
-        <tr>
-        <th>Mensaje</th>
-        <th>Phone</th>
-        <th>Date</th>
-        <th colspan="3"></th>
-        </tr>
-    </thead>
-
-    <tbody>
         <%= render "quotes/quotes" %>
-    </tbody>
-</table>
+ 
 
 <br>
 
 <h1> Tus Publicaciones</h1>
 
-<table class ="table">
-    <thead class ="table-dark">
-        <tr>
-        <th>Titulo</th>
-        <th>Descripcion</th>
-        <th>Valor</th>
-        <th colspan="3"></th>
-        </tr>
-    </thead>
-
-    <tbody>
             <%= render "publications/mypublications" %>
-    </tbody>
-</table>
 
 <br>
 

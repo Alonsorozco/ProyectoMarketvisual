@@ -57,7 +57,8 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= publication.title %></h5>
                             <p class="card-text"><%= publication.description %></p>
-                            <a href="#" > <%= link_to 'ver', publication ,class:"btn btn-primary"%></a>
+                            <a href="#" > <%= link_to 'Ver', publication ,class:"btn btn-primary"%></a>
+                            <a href="#" > <%= link_to 'Cotizar', new_quote_path(publication.id),class:"btn btn-primary"%></a>
                         </div>
                     </div>
                 </div>
