@@ -46,84 +46,28 @@
     </div>
 </div>
 <%# card%>
-<div class="container mb-5">
-    <div class="card-group mt-3">
-    <div class="card">
-        <img
-        src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-        class="card-img-top"
-        alt="..."
-        />
-        <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-        </p>
-        </div>
-        <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="card">
-        <img
-        src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
-        class="card-img-top"
-        alt="..."
-        />
-        <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-            This card has supporting text below as a natural lead-in to additional content.
-        </p>
-        </div>
-        <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="card">
-        <img
-        src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
-        class="card-img-top"
-        alt="..."
-        />
-        <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This card has even longer content than the first to show
-            that equal height action.
-        </p>
-        </div>
-        <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    </div>
-</div>
-<h1>Wines</h1>
 
-<table>
-    <thead>
-        <tr>
-        <th>nota</th>
-        <th>title</th>
-        <th>description</th>
-        <th colspan="3"></th>
-        </tr>
-    </thead>
+<div class="container">
+    <div class="row">
+        <div class="col-sm pt-3">
+            <%= @publications.each do |publication| %>
+                <div class="col-12 pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= publication.title %></h5>
+                            <p class="card-text"><%= publication.description %></p>
+                            <a href="#" > <%= link_to 'ver', publication ,class:"btn btn-primary"%></a>
+                        </div>
+                    </div>
+                </div>
+             <% end %>
+        </div>   
+    </div>
+</div> 
 
-    <tbody>
-        <% @publications.each do |publication| %>
-        <tr>
-            <td><%= publication.score %></td>
-            <td><%= publication.title %></td>
-            <td><%= publication.description %></td>
-            <td><%= link_to 'Show', publication %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
+
+
 
     
 <% else%>

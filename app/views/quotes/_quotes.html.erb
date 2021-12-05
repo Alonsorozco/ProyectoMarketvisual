@@ -4,8 +4,8 @@
             <td><%= quote.phone%></td>
             <td><%= quote.date%></td>
             <td><%= link_to 'Ver', quote %></td>
-            <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-            <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Editar', edit_quote_path(quote) %></td>
+            <td><%= link_to 'Cancelar', quote, method: :delete, data: { confirm: 'Deseas cancelar la cotizacion?' } %></td>
         </tr>
 <% end %>
 
