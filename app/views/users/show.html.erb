@@ -6,6 +6,8 @@
   <ul class="list-group "id='user'>
     <li class="list-group-item">Nombre:  <%= current_user.name %></li>
     <li class="list-group-item">Correo:  <%= current_user.email %></li>
+    <li class="list-group-item"> Publicaciones:  <%= current_user.publications.count%></li>
+    <li class="list-group-item"> Cotizaciones:  <%= current_user.quotes.count%></li>
   </ul>
   <div id='new_bookmark_btn' class="py-3">
       <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>

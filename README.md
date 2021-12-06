@@ -51,7 +51,9 @@ https://trello.com/b/yQPoq2Zp/proyecto-final
 * gem 'aws-sdk-s3'
 * gem 'faker'
 * gem 'rails-erd', group: :development
-
+* gem 'rails_admin', '~> 2.0'
+* gem 'cancancan'
+* gem 'ratyrate'
 ​
 
 
