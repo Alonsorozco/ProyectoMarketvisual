@@ -1,4 +1,4 @@
-<p id="notice" class="text-center mr-5 font-weight-bold bg-success"><%= notice %></p>
+<p id="notice" class="text-center mr-5 bg-success"><%= notice %></p>
 
 <% if user_signed_in? %>
 <%# carousel %>
@@ -55,21 +55,19 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm pt-3">
-                <%@publications.each do |publication| %>
-                    <div class="col-12 pt-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><%= publication.title %></h5>
-                                <p class="card-text"><%= publication.description %></p>
-                                <a href="#" > <%= link_to 'Ver', publication ,class:"btn btn-primary"%></a>
-                                <a href="#" > <%= link_to 'Cotizar', new_quote_path(publication.id),class:"btn btn-primary"%></a>
-                            </div>
+            <%@publications.each do |publication| %>
+                <div class="col-3 px-2 pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= publication.title %></h5>
+                            <p class="card-text"><%= publication.description %></p>
+                            <%= link_to 'Ver', publication ,class:"btn btn-primary"%>
+                            <%= link_to 'Cotizar', quote_new_path(publication.id),class:"btn btn-primary"%>
                         </div>
                     </div>
-                <% end %>
-            </div>   
+                </div>
+            <% end %>  
         </div>
     </div> 
 <% else%>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  resources :quotes
+  resources :quotes, except: %i[new]
+  get '/quotes/:publication_id/new', to: 'quotes#new', as: 'quote_new'
   resources :publications
   get "post", to: 'publications#make_post', as: 'post'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
