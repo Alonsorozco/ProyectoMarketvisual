@@ -1,7 +1,7 @@
-<p id="notice" class="text-center mr-5 bg-success"><%= notice %></p>
-<div class="container text-center">
+<p id="notice" class="text-center mr-5 bg-success imgdj "><%= notice %></p>
+<div class="container text-center bg-light ">
   <h1>Perfil De Usuario</h1>
-  <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid rounded-circle img_navbar perfilimg border border-primary "%><%root_path%><a>
+  <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid imgdj   rounded-circle img_navbar perfilimg border border-primary "%><%root_path%><a>
 
   <ul class="list-group "id='user'>
     <li class="list-group-item">Nombre:  <%= current_user.name %></li>
@@ -12,15 +12,21 @@
   </div>
 </div>
 
-
-
-
-<h1> Tus Cotizaciones</h1>
-        <%= render "quotes/quotes" %>
 <br>
 
-<h1> Tus Publicaciones</h1>
-            <%= render "publications/mypublications" %>
+
+<div class = "bg-light pt-3 text-center">
+  <h1> Tus Cotizaciones</h1>
+  <%= render "quotes/quotes" %>
+</div>
+
+<br>
+
+<div class = "bg-light">
+  <h1> Tus Publicaciones</h1>
+  <%= render "publications/mypublications" %>
+</div>
+
 <br>
 
 

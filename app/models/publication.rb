@@ -3,5 +3,5 @@ class Publication < ApplicationRecord
     belongs_to :user
     has_many :coments
     has_many :publication_category
-    ratyrate_rateable :speed, :engine, :price
+    ratyrate_rateable :speed
 end

@@ -9,7 +9,7 @@
 require 'faker'
         @user = User.create(
                     name: Faker::Movies::StarWars.character,
-                    email: "fabi@gmail.com",
+                    email: "fabiloco@gmail.com",
                     admin: true,
                     password: "123123",
                     password_confirmation: "123123")
