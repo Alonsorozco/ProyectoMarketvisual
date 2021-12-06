@@ -42,15 +42,20 @@
         <%= text_field_tag :q, "", class: 'form-control mr-sm-1' %>
         <%= submit_tag( "Buscar", Class: 'btn btn-outline-dark my-1 my-sm-0 ' )%>
 <%end%>
+               
                 <li class="nav-item">
                     <%= link_to 'Home', root_path, class:"nav-link" %>
                 </li>
+                 <% if current_user.admin? %>
+                    <%= link_to 'Perfil Administrador', admin_path,class:"nav-link" %>
+                <%end%>
                 <li class="nav-item">
                     <%= link_to 'Publicar', post_path, class:"nav-link" %>
                 </li>
                 <li>
                     <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link" %>
                 </li>
+                
                 
 
             </ul>

@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#index'
 
+  get 'admin', to: 'rails_admin/main#dashboard', ass: "admin_user"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
