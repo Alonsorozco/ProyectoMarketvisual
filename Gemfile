@@ -69,3 +69,5 @@ gem 'jquery-rails'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 gem 'ratyrate'
+gem 'omniauth-facebook'
+gem 'dotenv-rails', groups: [:development, :test]

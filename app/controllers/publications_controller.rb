@@ -21,7 +21,7 @@ class PublicationsController < ApplicationController
     @publication.user = current_user
     respond_to do |format|
       if @publication.save!
-        format.html { redirect_to publications_path @publication, notice: "has publicado" }
+        format.html { redirect_to profile_path(current_user.id), notice: "has publicado" }
         format.json { render :index, status: :created, location: @publication }
       else
         format.html { render :show, status: :unprocessable_entity }
@@ -64,7 +64,7 @@ class PublicationsController < ApplicationController
   end
 
   def publication_params
-    params.require(:publication).permit(:title, :description, :value)
+    params.require(:publication).permit(:title, :description, :value, images:[] )
   end
 
 end
