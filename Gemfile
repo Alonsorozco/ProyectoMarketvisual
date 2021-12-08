@@ -67,8 +67,12 @@ gem 'rails-erd', group: :development
 gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 gem 'rails_admin', '~> 2.0'
+
 gem 'cancancan'
+#gem para las notas
 gem 'ratyrate'
+#gema para auth de facebook
 gem 'omniauth-facebook'
 gem 'dotenv-rails', groups: [:development, :test]
+#gem para generar graficos
 gem 'chartkick'
