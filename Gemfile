@@ -71,3 +71,4 @@ gem 'cancancan'
 gem 'ratyrate'
 gem 'omniauth-facebook'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'chartkick'
