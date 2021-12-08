@@ -15,8 +15,9 @@
 </div>
 
 <br>
-<%= pie_chart current_user.publications.quotes.group(:publication).count %>
-
+<div class="bg-light">
+  <%= pie_chart current_user.publications.group(:Publicaciones).count %>
+</div>
 <br>
 
 
