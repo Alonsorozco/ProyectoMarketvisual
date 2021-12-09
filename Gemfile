@@ -76,3 +76,5 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails', groups: [:development, :test]
 #gem para generar graficos
 gem 'chartkick'
+
+gem 'figaro'

@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'profile/:id', to: 'users#show', as:'profile'
   resources :users, only: %i[edit update] 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   root 'homes#index'
 
   get 'admin', to: 'rails_admin/main#dashboard', ass: "admin_user"
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

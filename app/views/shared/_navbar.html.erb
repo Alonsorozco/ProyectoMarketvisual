@@ -70,6 +70,9 @@
                 <li class="nav-item">
                     <%= link_to 'Inicia Sesion',user_session_path, class:"nav-link" %>
                 </li>
+                <li class="nav-item">
+                    <%= link_to 'Sign in with Facebook',user_facebook_omniauth_authorize_path,method: :post, class:"nav-link" %>
+                </li>
             </ul>
 <% end %>
     </div>
