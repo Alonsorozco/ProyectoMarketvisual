@@ -72,7 +72,9 @@ gem 'cancancan'
 #gem para las notas
 gem 'ratyrate'
 #gema para auth de facebook
+gem 'omniauth'
 gem 'omniauth-facebook'
+gem "omniauth-rails_csrf_protection"
 gem 'dotenv-rails', groups: [:development, :test]
 #gem para generar graficos
 gem 'chartkick'
