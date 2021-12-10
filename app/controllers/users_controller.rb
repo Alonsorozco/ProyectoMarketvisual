@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def show
     @user_quotes = current_user.quotes
     @user_publications = current_user.publications
+    @quotes = current_user.quotes
   end
 
   def edit

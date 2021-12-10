@@ -16,7 +16,11 @@
 
 <br>
 <div class="bg-light">
-  <%= pie_chart current_user.publications.group(:Publicaciones).count %>
+  <h1>Graficos de tus cotizaciones diarias </h1>
+  <%= bar_chart current_user.quotes.group_by_day(:created_at).count%>
+  <h1>Graficos de tus publicaciones diarias </h1>
+  <%= bar_chart current_user.publications.group_by_day(:created_at).count%>
+
 </div>
 <br>
 
