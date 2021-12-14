@@ -1,0 +1,31 @@
+<div class="container text-center pb-3">
+<%= form_with(model: @donation, local: true) do |f| %>
+   
+<%= f.hidden_field :publication_id, value: params[:publication_id] %>
+
+
+    <div class="form-group">
+        <%= f.label 'Monto' %>
+        <%= f.text_field :amount, class:"form-control" %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label 'Titulo' %>
+        <%= f.text_field :amount, class:"form-control" %>
+    </div>
+ 
+    <div class="form-group">
+        <%= f.label 'Mensaje' %>
+        <%= f.text_field :message, class:"form-control" %>
+    </div>
+    
+    <div class = 'actions'>
+        <%= f.submit "Donar", class:"btn btn-primary"  %>
+    </div>
+    
+    
+    </div>
+
+    
+<% end %>
+</div>

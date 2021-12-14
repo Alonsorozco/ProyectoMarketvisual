@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :donations
   post '/rate' => 'rater#create', :as => 'rate'
   resources :quotes, except: %i[new]
   get '/quotes/:publication_id/new', to: 'quotes#new', as: 'quote_new'
