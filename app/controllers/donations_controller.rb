@@ -12,6 +12,12 @@ class DonationsController < ApplicationController
     
   end
 
+  def new
+    @donation = Donation.new
+  end
+
+  
+
   def create
     @donation = Donation.new(donation_params)
     @donation.status = "pending"
@@ -36,6 +42,7 @@ class DonationsController < ApplicationController
 
     response_body = JSON.parse(response.body.force_enconding("UTF-8"))
     @donation.code = response_body["token"]
+    
     repond_to do |format|
       if @donation.save!
         format.html { redirect_to @donation, notice: "Donation was successfully created" }
@@ -47,7 +54,7 @@ class DonationsController < ApplicationController
 
   private
   def set_donation
-    @quote = Donation.find(params[:id])
+    @donation = Donation.find(params[:id])
   end
 
   def donation_params

@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_12_14_021616) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -34,9 +37,9 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
   end
 
   create_table "average_caches", force: :cascade do |t|
-    t.integer "rater_id"
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "avg", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_categories_on_category_id"
   end
 
@@ -56,8 +59,8 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "publication_id"
-    t.integer "user_id"
+    t.bigint "publication_id"
+    t.bigint "user_id"
     t.index ["publication_id"], name: "index_coments_on_publication_id"
     t.index ["user_id"], name: "index_coments_on_user_id"
   end
@@ -74,7 +77,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
 
   create_table "overall_averages", force: :cascade do |t|
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "overall_avg", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -82,11 +85,11 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
   end
 
   create_table "publication_categories", force: :cascade do |t|
-    t.integer "catergory_id"
-    t.integer "publication_id"
+    t.bigint "category_id"
+    t.bigint "publication_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["catergory_id"], name: "index_publication_categories_on_catergory_id"
+    t.index ["category_id"], name: "index_publication_categories_on_category_id"
     t.index ["publication_id"], name: "index_publication_categories_on_publication_id"
   end
 
@@ -97,7 +100,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
     t.integer "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_publications_on_user_id"
   end
 
@@ -107,16 +110,16 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "publication_id"
+    t.bigint "user_id"
+    t.bigint "publication_id"
     t.index ["publication_id"], name: "index_quotes_on_publication_id"
     t.index ["user_id"], name: "index_quotes_on_user_id"
   end
 
   create_table "rates", force: :cascade do |t|
-    t.integer "rater_id"
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "stars", null: false
     t.string "dimension"
     t.datetime "created_at", null: false
@@ -128,7 +131,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
 
   create_table "rating_caches", force: :cascade do |t|
     t.string "cacheable_type"
-    t.integer "cacheable_id"
+    t.bigint "cacheable_id"
     t.float "avg", null: false
     t.integer "qty", null: false
     t.string "dimension"
@@ -154,4 +157,13 @@ ActiveRecord::Schema.define(version: 2021_12_14_021616) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "categories", "categories"
+  add_foreign_key "coments", "publications"
+  add_foreign_key "coments", "users"
+  add_foreign_key "publication_categories", "categories"
+  add_foreign_key "publication_categories", "publications"
+  add_foreign_key "publications", "users"
+  add_foreign_key "quotes", "publications"
+  add_foreign_key "quotes", "users"
 end

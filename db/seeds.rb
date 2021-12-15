@@ -54,9 +54,20 @@ require 'faker'
         )
     end
     #category
-    10.times do
+    5.times do
         Category.create(
             name:Faker::Movies::StarWars.planet,
-            category_id:rand(1..10)
+    
+
         )
     end
+
+    5.times do
+        Category.create(
+            name:Faker::Movies::StarWars.planet,
+            category_id:rand(1..5)
+
+        )
+    end
+
+

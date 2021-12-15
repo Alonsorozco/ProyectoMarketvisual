@@ -5,9 +5,9 @@
 <%= @publication.value %>
 <%= @publication.description %>
 
-<%@publications.each do|publication| %>
-    <%= publication.images %>
-<% end %>
+<%= @publication.images.map do |image| %>
+    <%= image_tag image %>
+<%end %>
 
 
 Nota : <%= rating_for @publication, :speed %>
