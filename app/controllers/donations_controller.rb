@@ -29,8 +29,9 @@ class DonationsController < ApplicationController
       }
     })
 
-    uri = URI(" https://biz-sandbox.soymach.com/payments")
-    http = Net::HTTP.new(uri.hots, uri.port)
+    url = URI("https://biz-sandbox.soymach.com/payments")
+
+    http = Net::HTTP.new(url.host, url.port)
     #create request
     request = Net::HTTP::Post.new(url)
     request["Content-Type"] = 'application/json'
@@ -40,7 +41,7 @@ class DonationsController < ApplicationController
     request.body = payload
     response = http.request(request)
 
-    response_body = JSON.parse(response.body.force_enconding("UTF-8"))
+    response_body = JSON.parse(response.body)
     @donation.code = response_body["token"]
     
     repond_to do |format|

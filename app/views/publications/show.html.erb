@@ -4,7 +4,7 @@
 <%= @publication.title %>
 <%= @publication.value %>
 <%= @publication.description %>
-<%= current_user.email %>
+<%= @publication.user.email %>
 
 <%= @publication.images.map do |image| %>
     <%= image_tag image %>

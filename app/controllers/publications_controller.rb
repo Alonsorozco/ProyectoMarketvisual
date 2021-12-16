@@ -21,9 +21,10 @@ class PublicationsController < ApplicationController
     @publication.user = current_user
     respond_to do |format|
       if @publication.save!
+        PublicationMailer.with(publication: @publication).new_publication_email.deliver_later
         format.html { redirect_to profile_path(current_user.id), notice: "has publicado" }
         format.json { render :index, status: :created, location: @publication }
-        PublicationMailer.with(publication: @publication).new_publication_email.deliver_later
+        
       else
         format.html { render :show, status: :unprocessable_entity }
         format.json { render json: @publication.errors, status: :unprocessable_entity }

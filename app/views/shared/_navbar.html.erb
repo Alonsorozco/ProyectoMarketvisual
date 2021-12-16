@@ -15,7 +15,7 @@
 
 <% if  user_signed_in? %>
      <!-- imagen de perfil-->
-    <a class="navbar-brand animation-target" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid imgdj rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%><a>
+    <a class="navbar-brand animation-target" href="#"><%=image_tag current_user.image,:class =>"img-fluid imgdj rounded-circle img_navbar navimg border border-primary ml-4"%><%root_path%><a>
     <!-- menu de perfil-->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
