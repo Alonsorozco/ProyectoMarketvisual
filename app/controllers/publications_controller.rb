@@ -23,6 +23,7 @@ class PublicationsController < ApplicationController
       if @publication.save!
         format.html { redirect_to profile_path(current_user.id), notice: "has publicado" }
         format.json { render :index, status: :created, location: @publication }
+        PublicationMailer.with(publication: @publication).new_publication_email.deliver_later
       else
         format.html { render :show, status: :unprocessable_entity }
         format.json { render json: @publication.errors, status: :unprocessable_entity }
@@ -36,6 +37,7 @@ class PublicationsController < ApplicationController
       if @publication.update(publication_params)
         format.html { redirect_to profile_path(current_user.id), notice: "La publicacion fue actualizada"}
         format.json { render :show, status: :ok, location: @publication }
+        
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @publication.errors, status: :unprocessable_entity }
