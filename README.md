@@ -9,6 +9,10 @@
 # MarketVisual Heroku
 https://marketvisual.herokuapp.com/
 
+# Mailer
+
+Se implemento mailer para notificar las publicaciones a los usuario
+
 # Descripcion Del Proyecto
 
 MarketVisual
