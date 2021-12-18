@@ -81,3 +81,4 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'figaro'
 gem "mini_magick"
+gem "rollbar"

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
   has_one_attached :avatar
@@ -8,6 +9,7 @@ class User < ApplicationRecord
   has_many :publications
   has_many :coments
   ratyrate_rater
+  after_validation :report_validation_errors_to_rollbar
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

@@ -282,6 +282,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rollbar (3.3.0)
     ruby-graphviz (1.2.5)
       rexml
     ruby2_keywords (0.0.5)
@@ -376,6 +377,7 @@ DEPENDENCIES
   rails-erd
   rails_admin (~> 2.0)
   ratyrate
+  rollbar
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
