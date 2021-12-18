@@ -1,7 +1,14 @@
-<p id="notice" class="text-center mr-5 bg-success imgdj "><%= notice %></p>
-<div class="container text-center bg-light ">
-  <h1>Perfil De Usuario</h1>
-  <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid imgdj   rounded-circle img_navbar perfilimg border border-primary "%><%root_path%><a>
+
+
+
+
+<p id="notice" class="text-center mr-5  imgdj "><%= notice %></p>
+<div class="container text-center bg-dark ">
+  <div class="card bg-dark ">
+  <img src="https://cdn.pixabay.com/photo/2017/07/31/23/38/video-2562034_960_720.jpg"class="card-img" alt="...">
+  
+  <div class="card-img-overlay">
+  <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid imgdj rounded-circle img_navbar perfilimg border border-primary "%><%root_path%><a>
 
   <ul class="list-group "id='user'>
     <li class="list-group-item">Nombre:  <%= current_user.name %></li>
@@ -12,7 +19,14 @@
   <div id='new_bookmark_btn' class="py-3">
       <%= link_to 'Editar', edit_user_path(current_user.id), class: 'btn btn-primary', remote: true%>
   </div>
+</div>  
+  </div>
 </div>
+
+
+
+
+
 
 <br>
 <div class="bg-light">
