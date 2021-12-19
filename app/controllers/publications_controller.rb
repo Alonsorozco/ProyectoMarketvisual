@@ -49,7 +49,7 @@ class PublicationsController < ApplicationController
   def destroy
     @publication.destroy
     respond_to do |format|
-      format.html { redirect_to profile_path(current_user.id), notice: "cancelaste una publicacion." }
+      format.html { redirect_to profile_path(current_user.id), notice: "Cancelaste una publicacion." }
       format.json { head :no_content }
     end
   end

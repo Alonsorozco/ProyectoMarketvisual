@@ -1,14 +1,68 @@
-<h1> Tus Publicaciones</h1>
+<h1>Publicacion</h1>
 
 
-<%= @publication.title %>
-<%= @publication.value %>
-<%= @publication.description %>
-<%= @publication.user.email %>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <%=@publication.title%>
+            </button>
+        </h2>
+        </div>
 
-<%= @publication.images.map do |image| %>
-    <%= image_tag image %>
-<%end %>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%=@publication.title%></h5>
+        <p class="card-text"><%=@publication.description %></p>
+        <p class="card-text"><small class="text-muted"><%= @publication.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Contacto
+            </button>
+        </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+            <%=@publication.user.email%>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Valor
+            </button>
+        </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+            <%= @publication.value %>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 Nota : <%= rating_for @publication, :speed %>
