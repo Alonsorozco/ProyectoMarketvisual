@@ -17,20 +17,20 @@ https://marketvisual.herokuapp.com/
 
 # Pasos para habilitar proyecto en local
 
-git clone para clonar repositorio
-Instalar  Ruby 2.7.3
-Crear gemset instalando rails 5.2.6
-rails s para hacer funcionar proyecto en local
+* git clone para clonar repositorio
+* Instalar  Ruby 2.7.3
+* Crear gemset instalando rails 5.2.6
+* rails s para hacer funcionar proyecto en local
 
 # Usuario Admin
  email: "fabiloco@gmail.com"
  password: "123123"
  
 # Usuario de prueba
-email: "alonso@gmail.com",
-password: "123123",
+* email: "alonso@gmail.com",
+* password: "123123",
 # Mailer
-Se implemento mailer para notificar las publicaciones a los usuario
+* Se implemento mailer para notificar las publicaciones a los usuario
 
 
 ### Historias De Usuario 🚀
