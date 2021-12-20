@@ -60,8 +60,12 @@
                     <div class="card" style="width: 18rem;">
                         <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><%= publication.title %></h5>
+                            
+                            <h4 class="card-title"><%= publication.title %></h4>
                             <p class="card-text"><%= publication.description %></p>
+                            <p class="card-text">Valor desde: <%= publication.value%></p>
+                            <p class="card-title text-muted"> Publicado por: <%= publication.user.name%>  <%= distance_of_time_in_words(Time.now, publication.created_at)%></p>
+                            
                             <%= link_to 'Ver', publication ,class:"btn btn-primary"%>
                             <%= link_to 'Cotizar', quote_new_path(publication.id),class:"btn btn-primary"%>
                         </div>

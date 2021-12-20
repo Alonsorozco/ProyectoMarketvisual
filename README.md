@@ -1,17 +1,6 @@
 # README
 
-# Usuario Admin
- email: "fabiloco@gmail.com"
- password: "123123"
- 
 # MarketVisual
-
-# MarketVisual Heroku
-https://marketvisual.herokuapp.com/
-
-# Mailer
-
-Se implemento mailer para notificar las publicaciones a los usuario
 
 # Descripcion Del Proyecto
 
@@ -21,6 +10,28 @@ lo usuarios que utilicen esta aplicacion podran evaluar y comentar los servicios
 lo profesionales podran publicar sus servicios indicando valores desde.
 Los usuarios podran cotizar y publicar
 APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.
+
+
+# MarketVisual Heroku
+https://marketvisual.herokuapp.com/
+
+# Pasos para habilitar proyecto en local
+
+git clone para clonar repositorio
+Instalar  Ruby 2.7.3
+Crear gemset instalando rails 5.2.6
+rails s para hacer funcionar proyecto en local
+
+# Usuario Admin
+ email: "fabiloco@gmail.com"
+ password: "123123"
+ 
+# Usuario de prueba
+email: "alonso@gmail.com",
+password: "123123",
+# Mailer
+Se implemento mailer para notificar las publicaciones a los usuario
+
 
 ### Historias De Usuario 🚀
 
