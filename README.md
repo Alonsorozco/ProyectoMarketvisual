@@ -23,8 +23,8 @@ https://marketvisual.herokuapp.com/
 * rails s para hacer funcionar proyecto en local
 
 # Usuario Admin
- email: "fabiloco@gmail.com"
- password: "123123"
+ * email: "fabiloco@gmail.com"
+ * password: "123123"
  
 # Usuario de prueba
 * email: "alonso@gmail.com",
