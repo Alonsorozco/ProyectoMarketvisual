@@ -4,6 +4,6 @@ class Publication < ApplicationRecord
     belongs_to :user
     has_many :coments
     has_many :publication_categories
-    has_many_attached :images
+    has_one_attached :image
     ratyrate_rateable :speed
 end

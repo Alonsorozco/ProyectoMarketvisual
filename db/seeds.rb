@@ -9,6 +9,7 @@
 require 'faker'
         @user = User.create(
                     name: Faker::Movies::StarWars.character,
+                    lastname:Faker::Movies::StarWars.character,
                     email: "fabiloco@gmail.com",
                     admin: true,
                     password: "123123",
@@ -18,6 +19,7 @@ require 'faker'
 
         @usertwo = User.create(
                 name: Faker::Movies::StarWars.character,
+                lastname:Faker::Movies::StarWars.character,
                 email: "alonso@gmail.com",
                 admin: false,
                 password: "123123",
