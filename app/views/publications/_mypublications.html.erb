@@ -3,7 +3,7 @@
             <%@user_publications.each do |publication| %>
                 <div class=" card_shadow col-3 px-2 pt-3">
                     <div class="card" style="width: 15rem;">
-                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
+                            <%= image_tag publication.image %>
                         <div class="card-body">
                             <h5 class="card-title"><%= publication.title %></h5>
                             <p class="card-text"><%= publication.description %></p>
