@@ -1,7 +1,7 @@
 <p id="notice" class="text-center alert-primary "><%= notice %></p>
-<div class="container text-center bg-dark ">
+<div class="container text-center ">
   <div class="card bg-dark">
-  <img src="https://cdn.pixabay.com/photo/2017/07/31/23/38/video-2562034_960_720.jpg"class="card-img mb-4" alt="...">
+  <img src="https://cdn.pixabay.com/photo/2017/07/31/23/38/video-2562034_960_720.jpg"class="w-100 imgdj" alt="...">
   <div class="card-img-overlay">
   <a class="navbar-brand" href="#"><%=image_tag current_user.avatar,:class =>"img-fluid imgdj rounded-circle  slide-in-left img_navbar perfilimg border border-primary "%><%root_path%><a>
 
@@ -19,22 +19,20 @@
 </div>
 
 
-
-
-
-
 <br>
 <div class="bg-light">
   <h1>Graficos de tus cotizaciones diarias</h1>
   <%= bar_chart current_user.quotes.group_by_day(:created_at).count%>
+</div>
+<br>
+<div class="bg-light">
   <h1>Graficos de tus publicaciones diarias</h1>
   <%= bar_chart current_user.publications.group_by_day(:created_at).count%>
-
 </div>
 <br>
 
 
-<div class = "bg-light pt-3 text-center">
+<div class = "bg-light pt-3 text-center ">
   <h1> Tus cotizaciones realizadas:</h1>
   <%= render "quotes/quotes" %>
 </div>
