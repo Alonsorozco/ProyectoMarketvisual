@@ -12,9 +12,9 @@
     <div class="container mb-5 ">
         <div class="row">
             <%@publications.each do |publication| %>
-                <div class="col-3 px-2 pt-3">
+                <div class="col-3 px-2 pt-3 m-2">
                     <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 18rem;">
-                        <%= image_tag publication.image %>
+                        <%= image_tag publication.image, class:"img-fluid" %>
                         <div class="card-body">
                             <h4 class="card-title"><%= publication.title %></h4>
                             <p class="card-text"><%= publication.description %></p>
@@ -31,7 +31,7 @@
     </div> 
 <% else%>
 <%# vista visitas %>
-    <div class = "container text-center">
+    <div class = "container text-center pt-5">
         <%= render "homes/visit" %>
     </div>
     

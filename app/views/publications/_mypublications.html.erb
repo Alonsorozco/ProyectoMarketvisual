@@ -1,9 +1,9 @@
 <div class="container">
-        <div class="row">
+        <div class="row p-3">
             <%@user_publications.each do |publication| %>
-                <div class=" card_shadow col-3 px-2 pt-3">
+                <div class=" shadow bg-white rounded col-3 p-3 m-3 ">
                     <div class="card" style="width: 15rem;">
-                            <%= image_tag publication.image %>
+                            <%= image_tag publication.image, class:"img-fluid" %>
                         <div class="card-body">
                             <h5 class="card-title"><%= publication.title %></h5>
                             <p class="card-text"><%= publication.description %></p>

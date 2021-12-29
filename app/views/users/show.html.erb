@@ -20,26 +20,26 @@
 
 
 <br>
-<div class="bg-light">
+<div class="">
   <h1>Graficos de tus cotizaciones diarias</h1>
   <%= bar_chart current_user.quotes.group_by_day(:created_at).count%>
 </div>
 <br>
-<div class="bg-light">
+<div class="">
   <h1>Graficos de tus publicaciones diarias</h1>
   <%= bar_chart current_user.publications.group_by_day(:created_at).count%>
 </div>
 <br>
 
 
-<div class = "bg-light pt-3 text-center ">
+<div class = " pt-3 text-center ">
   <h1> Tus cotizaciones realizadas:</h1>
   <%= render "quotes/quotes" %>
 </div>
 
 <br>
 
-<div class = "bg-light text-center">
+<div class = "text-center">
   <h1> Tus Publicaciones realizadas:</h1>
   <%= render "publications/mypublications" %>
 </div>

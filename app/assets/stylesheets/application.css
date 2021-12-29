@@ -16,7 +16,7 @@
 
  :root{
     --colorwhite: #FFFFFF;
-    --colorgray:#DDDDDD;
+    --colorgray:#f2f2f2;
     --colordarkblue:#125D98;
     --colornavyblue:#3C8DAD;
     --colororanje:#F5A962;
@@ -36,8 +36,23 @@
 
 .imagencarrusel{
     
+width: 110rem;
+height: 30rem;
 
-height: 50rem;
 
+
+
+}
+
+body{
+    background-color: var(--colorgray);
+}
+
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+.carousel-control-prev {
+    filter: invert(100%);
 }
 

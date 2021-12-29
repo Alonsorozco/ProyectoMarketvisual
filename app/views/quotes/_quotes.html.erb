@@ -2,9 +2,8 @@
 <div class="container">
         <div class="row">
             <%@user_quotes.each do |quote| %>
-                <div class="col-3 px-2 pt-3">
+                <div class="col-3 px-2 pt-3 ">
                     <div class="card" style="width: 15rem;">
-                        <img src="https://cdn.pixabay.com/photo/2015/04/13/13/37/audio-720589_960_720.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Fecha del evento: <%= quote.date%></h5>
                             <p class="card-text">Mensaje: <%= quote.message  %></p>
