@@ -8,3 +8,26 @@
 <h2>Aplicacion web de busqueda y publicaciones de servicios para profesionales del area audivisual , sonido y musicos profesionales ,los usuarios que utilicen esta aplicacion podran evaluar y comentar los servicios y cursos entregados por los profesionales. los profesionales podran publicar sus servicios indicando los valores . Los usuarios podran cotizar y publicar.
 APP específicamente para profesionales del área audiovisual, sonido y músicos profesionales.</h2>
 
+
+<div class="container mt-3 ">
+        <h1>Ultimas Publicaciones</h1>
+    </div>
+    <div class="container mb-5  ">
+        <div class="row">
+            <%@publications.each do |publication| %>
+                <div class="col-3 px-2 pt-4 m-4" >
+                    <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 18rem;">
+                        <%= image_tag publication.image, class:"img-fluid" %>
+                        <div class="card-body">
+                            <h4 class="card-title"><%= publication.title %></h4>
+                            <p class="card-text"><%= publication.description %></p>
+                            <p class="card-text">Valor desde: <%= publication.value%></p>
+                            <p class="card-title text-muted"> Publicado por: <%= publication.user.name%>  <%= distance_of_time_in_words(Time.now, publication.created_at)%></p>
+                            
+                            <%= link_to 'Ver', new_user_registration_path,class:"btn btn-primary"%>
+                        </div>
+                    </div>
+                </div>
+            <% end %>  
+        </div>
+    </div> 

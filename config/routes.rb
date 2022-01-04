@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :coments
   resources :donations
   post '/rate' => 'rater#create', :as => 'rate'
   resources :quotes, except: %i[new]

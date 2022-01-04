@@ -10,6 +10,7 @@ class PublicationsController < ApplicationController
 
   def make_post
     @publication = Publication.new 
+    @coment = Coment.new
   end
 
   def create
@@ -56,6 +57,7 @@ class PublicationsController < ApplicationController
 
 
   def show
+    @coment = Coment.new
     @publications = Publication.all
     #publicaciones solo del current_user
     @user_publications = current_user.publications

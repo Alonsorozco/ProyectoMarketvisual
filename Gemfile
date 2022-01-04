@@ -82,3 +82,4 @@ gem 'groupdate'
 gem 'figaro'
 gem "mini_magick"
 gem "rollbar"
+gem 'cable_ready'
