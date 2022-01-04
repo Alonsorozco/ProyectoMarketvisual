@@ -26,7 +26,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><%=@publication.title%></h5>
                                     <p class="card-text"><%=@publication.description%></p>
-                                    <a href="#" class="btn btn-primary">Cotizar</a>
+                                    <%= link_to 'Cotizar', quote_new_path(@publication.id),class:"btn btn-primary"%>
                                 </div>
                             </div>
                         </div>
