@@ -12,12 +12,12 @@
     </div>
   <% end %>
 
-  <div class="form-group w-25">
-    <%= form.label :content %>
+  <div class="container form-group w-50 text-center">
+    <%= form.label 'Comentarios'%>
     <%= form.text_area :content, class:'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit class:'btn btn-primary' %>
+  <div class="text-center actions">
+    <%= form.submit 'Comentar',class:'btn btn-primary' %>
   </div>
 <% end %>
