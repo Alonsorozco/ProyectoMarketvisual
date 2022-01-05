@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages, only: [:create]
   resources :coments
   resources :donations
   post '/rate' => 'rater#create', :as => 'rate'

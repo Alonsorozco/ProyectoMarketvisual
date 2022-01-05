@@ -15,12 +15,11 @@ APP específicamente para profesionales del área audiovisual, sonido y músicos
     <div class="container mb-5  ">
         <div class="row">
             <%@publications.each do |publication| %>
-                <div class="col-3 px-2 pt-4 m-4" >
-                    <div class="card shadow p-1 mb-5 bg-white rounded" style="width: 18rem;">
+                <div class="col-3" >
+                    <div class="card shadow mb-5 bg-white rounded" style="width: 15rem;">
                         <%= image_tag publication.image, class:"img-fluid" %>
                         <div class="card-body">
                             <h4 class="card-title"><%= publication.title %></h4>
-                            <p class="card-text"><%= publication.description %></p>
                             <p class="card-text">Valor desde: <%= publication.value%></p>
                             <p class="card-title text-muted"> Publicado por: <%= publication.user.name%>  <%= distance_of_time_in_words(Time.now, publication.created_at)%></p>
                             

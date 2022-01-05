@@ -5,5 +5,6 @@ class Publication < ApplicationRecord
     has_many :coments
     has_many :publication_categories
     has_one_attached :image
+    has_many :messages
     ratyrate_rateable :speed
 end

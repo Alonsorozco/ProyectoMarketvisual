@@ -1,23 +1,27 @@
 
-<%= form_with(model: @coment, local: true) do |form| %>
+<%= form_with(model: @coment, local: true) do |f| %>
   <% if @coment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@coment.errors.count, "error") %> prohibited this coment from being saved:</h2>
-
+    <div id = 'error_explanation'>
+      <h2>Este  no se pudo crear por las siguientes razones</h2>
       <ul>
-      <% @coment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @coment.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
+<%= f.hidden_field :publication_id, value: params[:id] %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+
   <div class="container form-group w-50 text-center">
-    <%= form.label 'Comentarios'%>
-    <%= form.text_area :content, class:'form-control' %>
+    <%= f.label 'Comentarios'%>
+    <%= f.text_area :content, class:'form-control' %>
   </div>
 
   <div class="text-center actions">
-    <%= form.submit 'Comentar',class:'btn btn-primary' %>
+    <%= f.submit 'Comentar', class:'btn btn-primary' %>
   </div>
+
+
 <% end %>

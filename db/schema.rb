@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_24_011726) do
+ActiveRecord::Schema.define(version: 2022_01_05_005957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,18 @@ ActiveRecord::Schema.define(version: 2021_12_24_011726) do
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id"
+    t.bigint "quote_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "publication_id"
+    t.index ["publication_id"], name: "index_messages_on_publication_id"
+    t.index ["quote_id"], name: "index_messages_on_quote_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "overall_averages", force: :cascade do |t|
@@ -164,6 +176,9 @@ ActiveRecord::Schema.define(version: 2021_12_24_011726) do
   add_foreign_key "categories", "categories"
   add_foreign_key "coments", "publications"
   add_foreign_key "coments", "users"
+  add_foreign_key "messages", "publications"
+  add_foreign_key "messages", "quotes"
+  add_foreign_key "messages", "users"
   add_foreign_key "publication_categories", "categories"
   add_foreign_key "publication_categories", "publications"
   add_foreign_key "publications", "users"

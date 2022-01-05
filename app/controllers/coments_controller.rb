@@ -1,5 +1,5 @@
 class ComentsController < ApplicationController
-    before_action :set_coment, only: %i[ show edit update destroy  ]
+    before_action :set_coment, only: %i[ show edit update destroy ]
 
 
     def index
@@ -20,6 +20,7 @@ class ComentsController < ApplicationController
 
 
     def create
+        
         @coment = Coment.new(coment_params)
 
         respond_to do |format|
@@ -33,11 +34,10 @@ class ComentsController < ApplicationController
         end
     end
 
-    # PATCH/PUT /games/1 or /games/1.json
     def update
         respond_to do |format|
         if @coment.update(coment_params)
-            format.html { redirect_to @coment, notice: "Comentarios se ha creado" }
+            format.html { redirect_to @coment, notice: "Comentarios se ha actualizado" }
             format.json { render :show, status: :ok, location: @coment }
         else
             format.html { render :edit, status: :unprocessable_entity }
@@ -62,6 +62,6 @@ class ComentsController < ApplicationController
 
 
         def coment_params
-        params.require(:coment).permit(:content )
+        params.require(:coment).permit(:content, :publication_id, :user_id)
     end
 end

@@ -1,3 +1,44 @@
-<%= @quote.date %>
-<%= @quote.phone %>
-<%= @quote.message %>
+<h1> Estos son tus mensajes con <%=@quote.user.name%></h1>
+
+<div class="row" id="message">
+    <div class="w-50">
+        <%@messages.each do |m| %>
+        <% if m.user == current_user %>
+            <div class="col-6">
+            </div>
+            <div class="col-6 text-right bg-primary ">
+                <%= m.content %>
+            </div>
+        <% else %>
+            <div class="col-6 text-left  bg-success text-white">
+                <%= m.content %>
+            </div>
+            <div class="col-6">
+            </div>
+        <% end %>
+
+    <% end %>
+    </div>
+</div>
+
+<%= form_with(model: @message, local: true) do |f| %>
+    <% if @message.errors.any? %>
+        <div id = 'error_explanation'>
+            <h2>Este  no se pudo crear por las siguientes razones</h2>
+            <ul>
+                <% @message.errors.full_messages.each do |msg|%>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= f.hidden_field :quote_id, value: params[:id] %>
+
+     <div class="form-group">
+        <%= f.text_field :content, class:"form-control" %>
+    </div>
+    <div class = 'actions'>
+        <%= f.submit %>
+    </div>
+<% end %>

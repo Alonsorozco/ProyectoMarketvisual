@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :quotes
   has_many :publications
   has_many :coments
+  has_many :messages
   ratyrate_rater
   after_validation :report_validation_errors_to_rollbar
 
