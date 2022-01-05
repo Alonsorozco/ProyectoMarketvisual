@@ -1,16 +1,17 @@
 <h1> Estos son tus mensajes con <%=@quote.user.name%></h1>
+<div class="container pt-2 shadow  rounded pb-2 pl-4 w-50">
 
-<div class="row" id="message">
+    <div class="row " id="message">
     <div class="w-50">
         <%@messages.each do |m| %>
         <% if m.user == current_user %>
             <div class="col-6">
             </div>
-            <div class="col-6 text-right bg-primary ">
-                <%= m.content %>
+            <div class="col-6 text-center  shadow btn btn-primary  btn-sm order border-warning">
+                Tu dices: <%= m.content %>
             </div>
         <% else %>
-            <div class="col-6 text-left  bg-success text-white">
+            <div class="col-6 ml-auto shadow bg-success btn-sm text-white">
                 <%= m.content %>
             </div>
             <div class="col-6">
@@ -20,6 +21,9 @@
     <% end %>
     </div>
 </div>
+
+</div>
+
 
 <%= form_with(model: @message, local: true) do |f| %>
     <% if @message.errors.any? %>
@@ -35,8 +39,8 @@
 
     <%= f.hidden_field :quote_id, value: params[:id] %>
 
-     <div class="form-group">
-        <%= f.text_field :content, class:"form-control" %>
+     <div class="form-group pt-3">
+        <%= f.text_field :content, class:"form-control " %>
     </div>
     <div class = 'actions'>
         <%= f.submit %>

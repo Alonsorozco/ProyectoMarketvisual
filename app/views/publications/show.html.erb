@@ -64,10 +64,15 @@
         </div>
         </div>
     </div>
-    Nota : <%= rating_for @publication, :speed %>
+  
 
     <div class="card mb-3 shadow p-1 mb-5 bg-white rounded">
+      Notas : <%= rating_for @publication, :speed %>
         <%= render "coments/form" %>
+    </div>
+
+     <div class="card mb-3 shadow p-1 mb-5 bg-white rounded">
+        <%= render "coments/coment" %>
     </div>
 </div>
 

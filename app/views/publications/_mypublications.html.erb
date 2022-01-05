@@ -12,8 +12,11 @@
                             <%= link_to 'Cancelar', publication,class:"btn btn-primary", method: :delete, data: { confirm: 'Deseas cancelar la publicacion?' } %>
                         </div>
                         <% publication.quotes.each do |q| %>
-                            <div class=" shadow bg-white rounded col-3 p-3 m-3 ">
-                                <div class="card" style="width: 15rem;">
+                            
+                            <div class=" shadow bg-white pt-3">
+                               
+                                <div class="border border-primary" style="width: 15rem;">
+                                     <h3>Cotizaciones</h3>
                                     <div class="card-body">
                                         <p class="card-text"><%= q.message %></p>
                                         <%= link_to 'Ver',q,class:"btn btn-primary"%>
