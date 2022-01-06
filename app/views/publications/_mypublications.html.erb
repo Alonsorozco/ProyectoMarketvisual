@@ -6,7 +6,6 @@
                             <%= image_tag publication.image, class:"img-fluid" %>
                         <div class="card-body">
                             <h5 class="card-title"><%= publication.title %></h5>
-                            <p class="card-text"><%= publication.description %></p>
                             <%= link_to 'Ver',publication,class:"btn btn-primary"%>
                             <%= link_to 'Editar', edit_publication_path(publication),class:"btn btn-primary" %>
                             <%= link_to 'Cancelar', publication,class:"btn btn-primary", method: :delete, data: { confirm: 'Deseas cancelar la publicacion?' } %>
@@ -15,11 +14,14 @@
                             
                             <div class=" shadow bg-white pt-3">
                                
-                                <div class="border border-primary" style="width: 15rem;">
-                                     <h3>Cotizaciones</h3>
+                                <div class="card text-white bg-dark  mb-3" style="width: 15rem;">
+                                    <div class="card-header">Cotizado por @º<%=q.user.name%></div>
                                     <div class="card-body">
-                                        <p class="card-text"><%= q.message %></p>
-                                        <%= link_to 'Ver',q,class:"btn btn-primary"%>
+                                        <p class="card-text"><%=q.user.name%> dice: <%=q.message %> </p>
+                                        <p>Telefono: <%=q.phone %></p>   
+                                        <p> Email: <%=q.user.email %></p>  
+                                        <br>
+                                        <%= link_to 'Chatear',q,class:"btn btn-primary"%>
                                     </div>
                                 </div>
                             </div>
