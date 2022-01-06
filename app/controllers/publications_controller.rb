@@ -61,6 +61,8 @@ class PublicationsController < ApplicationController
     @publications = Publication.all
     #publicaciones solo del current_user
     @user_publications = current_user.publications
+    @coments = Coment.all
+  
    
    
 

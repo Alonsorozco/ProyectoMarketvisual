@@ -3,11 +3,12 @@ class ComentsController < ApplicationController
 
 
     def index
-        @coments = Coment.all
+
     end
 
 
     def show
+        @coments = Coment.all
     end
 
 
@@ -25,7 +26,7 @@ class ComentsController < ApplicationController
 
         respond_to do |format|
         if @coment.save
-            format.html { redirect_to @coment, notice: "Comentarios se ha creado" }
+            format.html { redirect_to publication_path(@coment.publication_id), notice: "Comentarios se ha creado" }
             format.json { render :show, status: :created, location: @coment }
         else
             format.html { render :new, status: :unprocessable_entity }
@@ -63,5 +64,5 @@ class ComentsController < ApplicationController
 
         def coment_params
         params.require(:coment).permit(:content, :publication_id, :user_id)
-    end
+        end
 end

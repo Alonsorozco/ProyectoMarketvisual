@@ -1,1 +1,6 @@
-<%= @coment.content %>
+<% @coments.each do |coment| %>
+<ul class="card shadow bg-white rounded">
+    <%=coment.user.name %> :<li><%=coment.content %></li>
+</ul> 
+
+<% end %>
