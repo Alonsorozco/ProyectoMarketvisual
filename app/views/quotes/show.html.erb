@@ -1,6 +1,6 @@
 
 <div class="container pb-3">
-    <h1 class="text-center"> Mensajes con <%=@publication.user.name%></h1>
+    <h1 class="text-center"> Mensajes </h1>
 <div class="container pt-2 shadow  rounded pb-2 w-50">
 
     <div class="row " id="message">
@@ -10,12 +10,12 @@
             <div class="col-6">
             </div>
             <div class="col-6 text-center  shadow btn btn-primary  btn-sm border border-warning">
-                <%=current_user.name %> Dice: 
+                 Tu Dices: 
                 <h5><%= m.content %></h5>
             </div>
         <% else %>
             <div class="col-6 ml-auto shadow bg-success btn-sm text-white border border-warning">
-                <%=@publication.user.name%> Dice:
+                Usuario Dice:
                 <h5><%= m.content %></h5>
             </div>
             <div class="col-6">
