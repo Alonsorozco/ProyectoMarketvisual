@@ -10,10 +10,9 @@
                             <%= link_to 'Editar', edit_publication_path(publication),class:"btn btn-primary" %>
                             <%= link_to 'Cancelar', publication,class:"btn btn-primary", method: :delete, data: { confirm: 'Deseas cancelar la publicacion?' } %>
                         </div>
-                        <% publication.quotes.each do |q| %>
+                        <%publication.quotes.each do |q| %>
                             
                             <div class=" shadow bg-white pt-3">
-                               
                                 <div class="card text-white bg-dark  mb-3" style="width: 15rem;">
                                     <div class="card-header">Cotizado por @º<%=q.user.name%></div>
                                     <div class="card-body">

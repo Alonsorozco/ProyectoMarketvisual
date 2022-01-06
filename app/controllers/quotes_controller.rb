@@ -6,10 +6,11 @@ class QuotesController < ApplicationController
   end
 
   def show
-    @publication = Publication.find(params[:id])
+   
     @message = Message.new
-    @messages = Message.where(publication: Publication.find(@quote.publication.id) )
+    @messages = Message.where(publication: Publication.find(@quote.publication.id))
     # @messages = Message.joins(:quote).where("messages.user_id = ? ", current_user.id).where("messages.user_id = ? ",@quote.user.id).where("quotes.publication_id = ?", @quote.publication.id)
+    @publication = Publication.find(@quote.publication.id)
   end
 
   def new

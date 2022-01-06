@@ -9,6 +9,7 @@ class ComentsController < ApplicationController
 
     def show
         @coments = Coment.all
+        @publication = Publication.find(params[:id])
     end
 
 

@@ -1,6 +1,11 @@
 <% @coments.each do |coment| %>
-<ul class="card shadow bg-white rounded">
-    <%=coment.user.name %> :<li><%=coment.content %></li>
+<ul class="container">
+    <% if coment.publication_id == @publication.id %>
+        <br>
+        Por <%=coment.user.name %> :
+        <li class="card"><%=coment.content %></li>
+    <% else%>
+    
+    <% end %>
 </ul> 
-
 <% end %>
