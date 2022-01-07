@@ -49,7 +49,7 @@
             <%@publications.each do |publication| %>
                 <div class="col-3">
                     <div class="card shadow mb-5 bg-white rounded" style="width: 15rem;">
-                        <%= image_tag publication.image, class:"img-fluid" %>
+                        <%= image_tag publication.image, class:"img-fluid " %>
                         <div class="card-body">
                             <h4 class="card-title"><%= publication.title %></h4>
                             <p class="card-text">Valor desde: $<%= publication.value%></p>

@@ -1,20 +1,21 @@
 
 <div class="container pb-3">
     <h1 class="text-center"> Mensajes </h1>
-<div class="container pt-2 shadow  rounded pb-2 w-50">
+<div class="container pt-2 shadow  rounded pb-2 w-50 border border-info">
 
-    <div class="row " id="message">
-    <div class=" container">
+    <div class="row" id="message">
+    <div class="container ">
+        
         <%@messages.each do |m| %>
         <% if m.user == current_user %>
             <div class="col-6">
             </div>
-            <div class="col-6 text-center  shadow btn btn-primary  btn-sm border border-warning">
+            <div class="col-6 text-center  shadow btn btn-primary  btn-sm border border-warning rounded-pill">
                  Tu Dices: 
                 <h5><%= m.content %></h5>
             </div>
         <% else %>
-            <div class="col-6 ml-auto shadow bg-success btn-sm text-white border border-warning">
+            <div class="col-6 text-center ml-auto shadow bg-success btn-sm text-white border border-warning rounded-pill">
                 Usuario Dice:
                 <h5><%= m.content %></h5>
             </div>
@@ -43,9 +44,15 @@
 
     <%= f.hidden_field :quote_id, value: params[:id] %>
 
-     <div class="container form-group pt-3 w-50">
-        <%= f.text_field :content, class:"form-control  " %>
+    <div class="input-group mb-3 mt-2 w-50 container">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg></span>
+        </div>
+    <%= f.text_field :content, class:"form-control ", placeholder:"Mensaje" %>
     </div>
+
     <div class = 'actions  text-center'>
         <%= f.submit 'enviar',class:"btn btn-primary" %>
     </div>
