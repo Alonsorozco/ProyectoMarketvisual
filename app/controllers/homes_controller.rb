@@ -3,7 +3,13 @@ class HomesController < ApplicationController
  
 
   def index
-  @publications = Publication.all.order(created_at: :desc)
+    @q = params[:q]
+    if @q
+      @publications = Publication.where('title LIKE ?', "%#{params[:q]}%").order(created_at: :desc)
+    else
+      @publications= Publication.all.order(created_at: :desc)
+    end
+  # @publications = Publication.all.order(created_at: :desc)
   end
 
 
